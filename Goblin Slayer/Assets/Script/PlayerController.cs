@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     {
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Move();
         var distance = Vector2.Distance(transform.position, target.position);
@@ -33,10 +33,11 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        float _H = Input.GetAxis("Horizontal");
-        float _V = Input.GetAxis("Vertical");
+        float _H = Input.GetAxisRaw("Horizontal");
+        float _V = Input.GetAxisRaw("Vertical");
 
         Vector2 _Moviment = new Vector2(_H, _V).normalized * _Speed;
-        transform.Translate(_Moviment*Time.deltaTime);
+        //transform.Translate(_Moviment*Time.deltaTime);
+        GetComponent<Rigidbody2D>().velocity = _Moviment;
     }
 }
