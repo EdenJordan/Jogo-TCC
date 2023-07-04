@@ -1,3 +1,14 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,11 +17,10 @@ using UnityEngine;
 public enum EnemyState
 {
     parado,
-    aproximando,
-    afastando,
+    reposicionando,
     atacando
 }
-public class EnemyController : MonoBehaviour
+public class NewBehaviourScript : MonoBehaviour
 {
     private Transform targetPlayer;
     private float _speedEnemy;
@@ -48,11 +58,8 @@ public class EnemyController : MonoBehaviour
             case EnemyState.parado:
                 Parado();
                 break;
-            case EnemyState.aproximando:
-                Aproximando();
-                break;
-            case EnemyState.afastando:
-                Afastando();
+            case EnemyState.reposicionando:
+                Reposicionando();
                 break;
             case EnemyState.atacando:
                 Atacando();
@@ -62,18 +69,7 @@ public class EnemyController : MonoBehaviour
         }
     }
     
-    void Afastando()
-    {
-        if (distance >= _RangeAttackMax + _Tolerancia || distance <= _RangeAttackMax - _Tolerancia)
-        {
-            _speedEnemy = 3;
-            transform.Translate(direction * (_speedEnemy * Time.deltaTime) );
-        }
-        else
-        {
-            _estado = EnemyState.atacando;
-        }
-    }
+    
     void Atacando()
     {
         _speedEnemy = 0;
@@ -81,12 +77,12 @@ public class EnemyController : MonoBehaviour
         
         Parado();
     }
-    void Aproximando()
+    void Reposicionando()
     {
         if (distance >= _RangeAttackMax + _Tolerancia || distance <= _RangeAttackMax - _Tolerancia)
         {
             _speedEnemy = 2;
-            transform.Translate(-direction * (_speedEnemy * Time.deltaTime) );
+            transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, _speedEnemy * Time.deltaTime);
         }
         else
         {
@@ -102,25 +98,27 @@ public class EnemyController : MonoBehaviour
 
     void Parado()
     {
-        if (distance <= _RangeMin)
-        {
-            //Se afasta
-            _estado = EnemyState.afastando;
-        }
-        else if (distance > _RangeMax)
+        if (distance > _RangeMax)
         {
             //Nada
             _estado = EnemyState.parado;
         }
-        else if (distance <= _RangeMax && distance > _RangeAttackMax)
+        else if ((distance <= _RangeMin) || (distance <= _RangeMax && distance > _RangeAttackMax))
         {
-            //se Aproxima
-            _estado = EnemyState.aproximando;
+            //se reposiciona
+            _estado = EnemyState.reposicionando;
         }
         else if(distance <= _RangeAttackMax && distance > _RangeAttackMin)
         {
             //atacando
             _estado = EnemyState.atacando;
         }
+    }
+}
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
