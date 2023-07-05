@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Arvore.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Arvore.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TileMap/Tiles/Arvore.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMap/Tiles/Arvore.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TileMap/Tiles/agua.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMap/Tiles/agua.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,9 +39,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\anton\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\anton\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\anton\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\eden3\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\eden3\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\eden3\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -49,6 +50,14 @@
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.8f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\anton\OneDrive\Documentos\git\Jogo-TCC\Goblin Slayer&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\anton\OneDrive\Documentos\git\Jogo-TCC\Goblin Slayer" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.8f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\Users\eden3\Jogo-TCC\Goblin Slayer&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\eden3\Jogo-TCC\Goblin Slayer" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
@@ -93,6 +102,7 @@
       <workItem from="1686680482335" duration="3128000" />
       <workItem from="1687890132302" duration="2093000" />
       <workItem from="1687900138657" duration="2458000" />
+      <workItem from="1688490668843" duration="607000" />
     </task>
     <servers />
   </component>

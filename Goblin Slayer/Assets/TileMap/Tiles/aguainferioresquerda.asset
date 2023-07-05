@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: aguainferioresquerda
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -1419302318, guid: 49f0a1e3a84b95a4c879deb32919c5ad, type: 3}
+  - {fileID: -113227748, guid: 2ed3ca431f30bab4b9f6964e7fa24f21, type: 3}
+  - {fileID: 791905916, guid: f902310db3bd9c8489464346b6bc02fd, type: 3}
+  - {fileID: -2147271215, guid: 893e94110458f8640bd48ea0bcafb1a8, type: 3}
+  - {fileID: 330316795, guid: 0b2f1141e4e5e5c4fbf422ac42866d20, type: 3}
+  - {fileID: -237475597, guid: a3c115c0eabd8784a9195d0895461228, type: 3}
+  m_MinSpeed: 5
+  m_MaxSpeed: 5
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
