@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MaquinaDeEstado.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MaquinaDeEstado.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/NewBehaviourScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/NewBehaviourScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileMap/Tiles/agua.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMap/Tiles/agua.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +14,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/NewBehaviourScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/TiroPlayer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -100,7 +96,7 @@
       <workItem from="1687900138657" duration="2458000" />
       <workItem from="1688494175773" duration="7317000" />
       <workItem from="1688501627203" duration="13000" />
-      <workItem from="1688558935047" duration="2153000" />
+      <workItem from="1688558935047" duration="5649000" />
     </task>
     <servers />
   </component>
