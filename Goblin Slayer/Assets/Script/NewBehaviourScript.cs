@@ -1,28 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class NewBehaviourScript : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EnemyState
+/*public enum EnemyState
 {
     parado,
     reposicionando,
     atacando
-}
+}*/
 public class NewBehaviourScript : MonoBehaviour
 {
-    private Transform targetPlayer;
+    /*private Transform targetPlayer;
     private float _speedEnemy;
     private float distance;
     private Vector3 direction;
@@ -114,11 +103,4 @@ public class NewBehaviourScript : MonoBehaviour
             _estado = EnemyState.atacando;
         }
     }
-}
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
+*/}

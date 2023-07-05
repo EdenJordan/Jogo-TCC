@@ -17,11 +17,11 @@ public class EnemyController : MonoBehaviour
     private float distance;
     private Vector3 direction;
 
-    public float _RangeMax = 10;
-    public float _RangeMin = 5;
+    public float _RangeMax = 15;
+    public float _RangeMin = 3;
     public float _RangeAttackMax = 7;
     public float _RangeAttackMin = 6;
-    public float _Tolerancia = 0.01f;
+    public float _Tolerancia = 0.2f;
     
     public EnemyState _estado;
     // Start is called before the first frame update
@@ -62,44 +62,6 @@ public class EnemyController : MonoBehaviour
         }
     }
     
-    void Afastando()
-    {
-        if (distance >= _RangeAttackMax + _Tolerancia || distance <= _RangeAttackMax - _Tolerancia)
-        {
-            _speedEnemy = 3;
-            transform.Translate(direction * (_speedEnemy * Time.deltaTime) );
-        }
-        else
-        {
-            _estado = EnemyState.atacando;
-        }
-    }
-    void Atacando()
-    {
-        _speedEnemy = 0;
-        //inserir logica de ataque
-        
-        Parado();
-    }
-    void Aproximando()
-    {
-        if (distance >= _RangeAttackMax + _Tolerancia || distance <= _RangeAttackMax - _Tolerancia)
-        {
-            _speedEnemy = 2;
-            transform.Translate(-direction * (_speedEnemy * Time.deltaTime) );
-        }
-        else
-        {
-            _estado = EnemyState.atacando;
-        }
-    }
-    void CalcularDistancia()
-    {
-        distance = Vector2.Distance(transform.position, targetPlayer.position);
-        var heading = (transform.position - targetPlayer.position);
-        direction = heading / distance;
-    }
-
     void Parado()
     {
         if (distance <= _RangeMin)
@@ -122,5 +84,44 @@ public class EnemyController : MonoBehaviour
             //atacando
             _estado = EnemyState.atacando;
         }
+    }
+    void Afastando()
+    {
+        if (distance >= _RangeAttackMax + _Tolerancia || distance <= _RangeAttackMax - _Tolerancia)
+        {
+            _speedEnemy = 3;
+            transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, -(_speedEnemy) * Time.deltaTime);
+            //transform.Translate(direction * (_speedEnemy * Time.deltaTime) );
+        }
+        else
+        {
+            _estado = EnemyState.atacando;
+        }
+    }
+    void Atacando()
+    {
+        _speedEnemy = 0;
+        //inserir logica de ataque
+        
+        Parado();
+    }
+    void Aproximando()
+    {
+        if (distance >= _RangeAttackMax + _Tolerancia || distance <= _RangeAttackMax - _Tolerancia)
+        {
+            _speedEnemy = 2;
+            transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, _speedEnemy * Time.deltaTime);
+            //transform.Translate(-direction * (_speedEnemy * Time.deltaTime) );
+        }
+        else
+        {
+            _estado = EnemyState.atacando;
+        }
+    }
+    void CalcularDistancia()
+    {
+        distance = Vector2.Distance(transform.position, targetPlayer.position);
+        var heading = (transform.position - targetPlayer.position);
+        direction = heading / distance;
     }
 }
