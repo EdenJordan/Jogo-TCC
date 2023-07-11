@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Arvore 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Arvore 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Arvore 1.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Arvore 1.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/arvore.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/arvore.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileMap/Teste.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMap/Teste.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileMap/terrenos.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMap/terrenos.prefab" afterDir="false" />
-    </list>
+    <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -107,6 +102,7 @@
       <workItem from="1688490668843" duration="607000" />
       <workItem from="1688850627856" duration="3000" />
       <workItem from="1688853759059" duration="4000" />
+      <workItem from="1689100566277" duration="595000" />
     </task>
     <servers />
   </component>
