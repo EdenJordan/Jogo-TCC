@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="" />
+    <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TileMap/RuleTRiles/New Rule Tile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMap/RuleTRiles/New Rule Tile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TileMap/terrenos.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMap/terrenos.prefab" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,6 +107,7 @@
       <workItem from="1688850627856" duration="3000" />
       <workItem from="1688853759059" duration="4000" />
       <workItem from="1689100566277" duration="595000" />
+      <workItem from="1689293045222" duration="4000" />
     </task>
     <servers />
   </component>
