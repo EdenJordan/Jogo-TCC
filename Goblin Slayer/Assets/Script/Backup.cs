@@ -9,7 +9,7 @@ using UnityEngine;
     reposicionando,
     atacando
 }*/
-public class NewBehaviourScript : MonoBehaviour
+public class Backup : MonoBehaviour
 {
     /*private Transform targetPlayer;
     private float _speedEnemy;
