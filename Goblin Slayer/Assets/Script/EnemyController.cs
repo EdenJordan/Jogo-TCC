@@ -21,7 +21,7 @@ public class EnemyController : MonoBehaviour
     public float _RangeMin = 3;
     public float _RangeAttackMax = 7;
     public float _RangeAttackMin = 6;
-    public float _Tolerancia = 0.2f;
+    public float _Tolerancia = 0.5f;
     
     public EnemyState _estado;
     // Start is called before the first frame update
@@ -60,6 +60,8 @@ public class EnemyController : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
+        
+        
     }
     
     void Parado()
@@ -87,9 +89,9 @@ public class EnemyController : MonoBehaviour
     }
     void Afastando()
     {
-        if (distance >= _RangeAttackMax + _Tolerancia || distance <= _RangeAttackMax - _Tolerancia)
+        if (distance >= _RangeAttackMax + _Tolerancia || distance <= _RangeAttackMin - _Tolerancia)
         {
-            _speedEnemy = 3;
+            _speedEnemy = 2;
             transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, -(_speedEnemy) * Time.deltaTime);
             //transform.Translate(direction * (_speedEnemy * Time.deltaTime) );
         }
@@ -107,9 +109,9 @@ public class EnemyController : MonoBehaviour
     }
     void Aproximando()
     {
-        if (distance >= _RangeAttackMax + _Tolerancia || distance <= _RangeAttackMax - _Tolerancia)
+        if (distance >= _RangeAttackMax || distance <= _RangeAttackMin)
         {
-            _speedEnemy = 2;
+            _speedEnemy = 2f;
             transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, _speedEnemy * Time.deltaTime);
             //transform.Translate(-direction * (_speedEnemy * Time.deltaTime) );
         }
