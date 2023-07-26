@@ -6,16 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Arvore 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Arvore 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ArvoreGrande.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ArvoreGrande.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/arvore.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/arvore.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/arvoregrande.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/arvoregrande.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileMap/Tiles/Arvore.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMap/Tiles/Arvore.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileMap/Tiles/ArvoreGrande.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMap/Tiles/ArvoreGrande.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileMap/terrenos.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMap/terrenos.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Menu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +110,7 @@
       <workItem from="1688853759059" duration="4000" />
       <workItem from="1689100566277" duration="595000" />
       <workItem from="1689293045222" duration="4000" />
-      <workItem from="1690373155047" duration="1325000" />
+      <workItem from="1690373155047" duration="3225000" />
     </task>
     <servers />
   </component>

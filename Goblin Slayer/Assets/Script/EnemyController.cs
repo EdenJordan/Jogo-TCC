@@ -24,6 +24,10 @@ public class EnemyController : MonoBehaviour
     public float _Tolerancia = 0.5f;
     
     public EnemyState _estado;
+    
+    //Tiro
+    public Transform quadrado;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -60,8 +64,11 @@ public class EnemyController : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
-        
-        
+
+        Vector2 dir = (transform.position - targetPlayer.position).normalized;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        quadrado.rotation = Quaternion.Euler(0, 0, angle);
+
     }
     
     void Parado()
