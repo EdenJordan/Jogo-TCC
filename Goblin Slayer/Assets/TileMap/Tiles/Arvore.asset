@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: Arvore
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 0}
-  m_DefaultGameObject: {fileID: 1354380977232373366, guid: d4b810c3daba1264dacfb8cc1a19609a, type: 3}
-  m_DefaultColliderType: 0
+  m_DefaultSprite: {fileID: 21300000, guid: 31a44414ca19ebd4992611138e5dd757, type: 3}
+  m_DefaultGameObject: {fileID: 6183776290777857804, guid: 40bf9380508d91c48af1b8d5df9cb4b2, type: 3}
+  m_DefaultColliderType: 2
   m_TilingRules: []
