@@ -6,6 +6,7 @@ public class TiroPlayer : MonoBehaviour
 {
     private Rigidbody2D rig;
     private PlayerController player;
+    private GameManager _gamaManager;
     
     private float speed;
     private float timerDestroy;
@@ -15,6 +16,7 @@ public class TiroPlayer : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("PlayerController").GetComponent<PlayerController>();
+        _gamaManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         rig = GetComponent<Rigidbody2D>();
         speed = 8;
         timerDestroy = 3;
@@ -27,25 +29,25 @@ public class TiroPlayer : MonoBehaviour
         //Movimenta o tiro
         
         //Direita
-        if (player.animTiros == 1 && timer == 3)
+        if (player.animTiros == 1 && timer == 3 && _gamaManager.tiroAtual != 1)
         {
             transform.eulerAngles = new Vector3(0, 0, 90);
             rig.velocity = Vector2.right * speed;
         }
         //Esquerda
-        else if (player.animTiros == 2 && timer == 3)
+        else if (player.animTiros == 2 && timer == 3 && _gamaManager.tiroAtual != 1)
         {
             transform.eulerAngles = new Vector3(0, 0, -90);
             rig.velocity = Vector2.left * speed;
         }
         //Cima
-        else if (player.animTiros == 3 && timer == 3)
+        else if (player.animTiros == 3 && timer == 3 && _gamaManager.tiroAtual != 1)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
             rig.velocity = Vector2.up * speed;
         }
         //Baixo
-        else if (player.animTiros == 4 && timer == 3)
+        else if (player.animTiros == 4 && timer == 3 && _gamaManager.tiroAtual != 1)
         {
             transform.eulerAngles = new Vector3(0, 0, 180);
             rig.velocity = Vector2.down * speed;

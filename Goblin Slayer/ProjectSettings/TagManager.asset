@@ -8,6 +8,8 @@ TagManager:
   - TiroEnemy
   - Enemy
   - Botao
+  - AtaquePlayer
+  - ZonaDeDano
   layers:
   - Default
   - TransparentFX

@@ -6,23 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Ani/WalkUp.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Ani/WalkUp.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Ani/testanim.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Ani/testanim.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Animators/playeranimacaobaixo-Sheet-export_0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Animators/playeranimacaobaixo-Sheet-export_0.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Arvore 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Arvore 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ArvoreGrande.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ArvoreGrande.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tiros/tiroFogo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tiros/tiroFogo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tiros/tiroGelo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tiros/tiroGelo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tiros/tiroRaio.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tiros/tiroRaio.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyController.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tiros/Flecha.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tiros/Flecha.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GamaManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamaManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GamaManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GamaManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Pause.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Pause.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TiroEnemey.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TiroEnemey.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/TiroPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TiroPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/VidaEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/VidaEnemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +27,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/Puzzles.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/VidaEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/VidaPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -128,6 +124,7 @@
       <workItem from="1690373155047" duration="3225000" />
       <workItem from="1690590782480" duration="6169000" />
       <workItem from="1690650283010" duration="19369000" />
+      <workItem from="1690727364919" duration="7639000" />
     </task>
     <servers />
   </component>

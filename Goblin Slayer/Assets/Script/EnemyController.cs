@@ -108,7 +108,7 @@ public class EnemyController : MonoBehaviour
     {
         if (distance >= _RangeAttackMax + _Tolerancia || distance <= _RangeAttackMin - _Tolerancia)
         {
-            _speedEnemy = 2;
+            _speedEnemy = 1.8f;
             transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, -(_speedEnemy) * Time.deltaTime);
             //transform.Translate(direction * (_speedEnemy * Time.deltaTime) );
         }
@@ -128,7 +128,7 @@ public class EnemyController : MonoBehaviour
     {
         if (distance >= _RangeAttackMax || distance <= _RangeAttackMin)
         {
-            _speedEnemy = 2f;
+            _speedEnemy = 1.8f;
             transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, _speedEnemy * Time.deltaTime);
             //transform.Translate(-direction * (_speedEnemy * Time.deltaTime) );
         }
