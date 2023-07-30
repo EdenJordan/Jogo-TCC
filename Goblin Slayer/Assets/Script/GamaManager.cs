@@ -8,8 +8,7 @@ public class GamaManager : MonoBehaviour
     public GameObject tiroFogo;
     public GameObject tiroGelo;
     public GameObject tiroRaio;
-    private GameObject player;
-    private Vector2 disparoPosition;
+    private Vector3 localDeDisparo;
     
     private float timer;
     private float tiroAtual;
@@ -35,8 +34,7 @@ public class GamaManager : MonoBehaviour
 
     void ProcurarObjetos()
     {
-        player = GameObject.Find("LocalDeDisparo");
-        disparoPosition = new Vector2(player.transform.position.x, player.transform.position.y);
+        localDeDisparo = GameObject.Find("LocalDeDisparoPlayer").transform.position;
     }
 
     void Atira()
@@ -50,19 +48,19 @@ public class GamaManager : MonoBehaviour
                 {
                     timer = 3;
                     onFire = true;
-                    Instantiate(tiroFogo, disparoPosition, tiroFogo.transform.rotation);
+                    Instantiate(tiroFogo, localDeDisparo, tiroFogo.transform.rotation);
                 }
                 if (tiroAtual == 2)
                 {
                     timer = 3;
                     onFire = true;
-                    Instantiate(tiroGelo, disparoPosition, tiroGelo.transform.rotation);
+                    Instantiate(tiroGelo, localDeDisparo, tiroGelo.transform.rotation);
                 }
                 if (tiroAtual == 3)
                 {
                     timer = 3;
                     onFire = true;
-                    Instantiate(tiroRaio, disparoPosition, tiroRaio.transform.rotation);
+                    Instantiate(tiroRaio, localDeDisparo, tiroRaio.transform.rotation);
                 }
             }
         }

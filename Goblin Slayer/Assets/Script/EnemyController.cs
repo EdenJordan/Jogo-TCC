@@ -15,7 +15,7 @@ public class EnemyController : MonoBehaviour
     private Transform targetPlayer;
     private float _speedEnemy;
     private float distance;
-    private Vector3 direction;
+    public Vector3 direction;
 
     public float _RangeMax = 15;
     public float _RangeMin = 3;
@@ -26,14 +26,24 @@ public class EnemyController : MonoBehaviour
     public EnemyState _estado;
     
     //Tiro
-    public Transform quadrado;
+    public Transform arco;
+    public GameObject _Flecha;
+    public Transform localDeDisparo;
+    public Vector2 dir;
+    public Quaternion _rotation;
     
+    private float timer;
+    public float angle;
+    
+
     // Start is called before the first frame update
     void Start()
     {
         _estado = EnemyState.parado;
         _speedEnemy = 3;
         targetPlayer = FindObjectOfType<PlayerController>().transform;
+        //Tiro
+        timer = 1;
     }
 
     // Update is called once per frame
@@ -64,11 +74,11 @@ public class EnemyController : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
-
-        Vector2 dir = (transform.position - targetPlayer.position).normalized;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        quadrado.rotation = Quaternion.Euler(0, 0, angle);
-
+        //Tiro
+        dir = (arco.position - targetPlayer.position).normalized;
+        angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        _rotation = Quaternion.Euler(0, 0, angle);
+        arco.rotation = Quaternion.Euler(0, 0, angle);
     }
     
     void Parado()
@@ -110,7 +120,7 @@ public class EnemyController : MonoBehaviour
     void Atacando()
     {
         _speedEnemy = 0;
-        //inserir logica de ataque
+        Flecha();
         
         Parado();
     }
@@ -132,5 +142,16 @@ public class EnemyController : MonoBehaviour
         distance = Vector2.Distance(transform.position, targetPlayer.position);
         var heading = (transform.position - targetPlayer.position);
         direction = heading / distance;
+    }
+    //Tiro
+    private void Flecha()
+    {
+        timer -= Time.deltaTime;
+        
+        if (timer <= 0)
+        {
+            Instantiate(_Flecha, localDeDisparo.position, _rotation);
+            timer = 2;
+        }
     }
 }
