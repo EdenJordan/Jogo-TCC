@@ -5,38 +5,65 @@ using UnityEngine;
 public class TiroPlayer : MonoBehaviour
 {
     private Rigidbody2D rig;
-    private Transform player;
+    private PlayerController player;
+    private GameManager _gamaManager;
     
     private float speed;
+    private float timerDestroy;
     private float timer;
     
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("PlayerController").GetComponent<PlayerController>();
+        _gamaManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         rig = GetComponent<Rigidbody2D>();
-        player = GameObject.Find("PlayerController").transform;
         speed = 8;
+        timerDestroy = 3;
         timer = 3;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         //Movimenta o tiro
-        if (player.rotation.y == 0)
+        
+        //Direita
+        if (player.animTiros == 1 && timer == 3 && _gamaManager.tiroAtual != 1)
         {
+            transform.eulerAngles = new Vector3(0, 0, 90);
             rig.velocity = Vector2.right * speed;
         }
-        else if (player.rotation.y == 180)
+        //Esquerda
+        else if (player.animTiros == 2 && timer == 3 && _gamaManager.tiroAtual != 1)
         {
+            transform.eulerAngles = new Vector3(0, 0, -90);
             rig.velocity = Vector2.left * speed;
+        }
+        //Cima
+        else if (player.animTiros == 3 && timer == 3 && _gamaManager.tiroAtual != 1)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+            rig.velocity = Vector2.up * speed;
+        }
+        //Baixo
+        else if (player.animTiros == 4 && timer == 3 && _gamaManager.tiroAtual != 1)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 180);
+            rig.velocity = Vector2.down * speed;
         }
         
         //Destroi o tiro
+        timerDestroy -= Time.deltaTime;
         timer -= Time.deltaTime;
-        if (timer <= 0)
+        
+        if (timerDestroy <= 0)
         {
             Destroy(gameObject);
+        }
+        if (timer <= 0)
+        {
+            timer = 3;
         }
     }
 }

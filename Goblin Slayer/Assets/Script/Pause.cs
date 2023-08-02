@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,10 +7,20 @@ using UnityEngine.EventSystems;
 public class Pause : MonoBehaviour
 {
     public GameObject painelPause;
+    public GameObject painelGameOver;
+
+    private bool isGameOver;
+
+    private void Start()
+    {
+        isGameOver = false;
+        Time.timeScale = 1;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape) && !isGameOver)
         {
             if (painelPause.activeSelf)
             {
@@ -33,5 +44,12 @@ public class Pause : MonoBehaviour
     public void DesselecionarButao()
     {
         EventSystem.current.SetSelectedGameObject(null);
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0;
+        isGameOver = true;
+        painelGameOver.SetActive(true);
     }
 }

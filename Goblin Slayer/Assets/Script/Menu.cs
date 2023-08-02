@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class Menu : MonoBehaviour
 { 
@@ -11,6 +12,7 @@ public class Menu : MonoBehaviour
     }
     public void Jogar()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
     public void Creditos()
@@ -21,5 +23,10 @@ public class Menu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Sair do jogo");
+        DesselecionarButao();
+    }
+    public void DesselecionarButao()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
     }
 }
