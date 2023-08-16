@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 459f313a66a5c0a4b92a3611bfca97f6
+guid: 21ea7083d507ac04baaa77f70abd896d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_0
+      name: arqueiroidlebaixo-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 24
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 037fe45aa48ad7e47b64ddf5e73d6f96
-      internalID: -38462337
+      spriteID: 79dba74b4e5525b4287fe47f17806b38
+      internalID: -1803151236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_1
+      name: arqueiroidlebaixo-Sheet_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 24
         y: 0
-        width: 32
-        height: 32
+        width: 24
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f827e70e5cc19248ae52fb735691af9
-      internalID: 328446013
+      spriteID: 77f857ee2a8621046b036540f3d9b5db
+      internalID: 898341240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_2
+      name: arqueiroidlebaixo-Sheet_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 48
         y: 0
-        width: 32
-        height: 32
+        width: 24
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce2258f379958e34c9b9b67fd0946f43
-      internalID: 2132429658
+      spriteID: b4f7a0cd87e71a44da86f11154aa0be5
+      internalID: 474252523
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_3
+      name: arqueiroidlebaixo-Sheet_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 72
         y: 0
-        width: 32
-        height: 32
+        width: 24
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,92 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec17bf9d1d796ce46866aa0630cad544
-      internalID: 301056218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcf73772c85dfca41a7e191485a76520
-      internalID: 1176627288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3df41035a07f3be4cba8da95b48afc00
-      internalID: 1480440362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3042fb61780b00f4aac202d9ada21da9
-      internalID: -1961113000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd2b4320cdc05804982eb79a54ea89e6
-      internalID: 1293835853
+      spriteID: 4b9970a752febd44db5dc8f82eb76a9a
+      internalID: 23644306
       vertices: []
       indices: 
       edges: []
@@ -282,14 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      playeranimacaobaixo-Sheet-export_7: 1293835853
-      playeranimacaobaixo-Sheet-export_4: 1176627288
-      playeranimacaobaixo-Sheet-export_5: 1480440362
-      playeranimacaobaixo-Sheet-export_6: -1961113000
-      playeranimacaobaixo-Sheet-export_3: 301056218
-      playeranimacaobaixo-Sheet-export_2: 2132429658
-      playeranimacaobaixo-Sheet-export_1: 328446013
-      playeranimacaobaixo-Sheet-export_0: -38462337
+      arqueiroidlebaixo-Sheet_2: 474252523
+      arqueiroidlebaixo-Sheet_0: -1803151236
+      arqueiroidlebaixo-Sheet_3: 23644306
+      arqueiroidlebaixo-Sheet_1: 898341240
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

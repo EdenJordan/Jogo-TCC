@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 459f313a66a5c0a4b92a3611bfca97f6
+guid: 12537e9a06220dd4d94f5cd4c5b509ac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_0
+      name: arqueirowalkcima-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 037fe45aa48ad7e47b64ddf5e73d6f96
-      internalID: -38462337
+      spriteID: 6fcb59a110944144a8946d7489f2cfa7
+      internalID: 408685373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_1
+      name: arqueirowalkcima-Sheet_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 24
         y: 0
-        width: 32
-        height: 32
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f827e70e5cc19248ae52fb735691af9
-      internalID: 328446013
+      spriteID: f14f1516410678847b876b481b30b3a9
+      internalID: 710264525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_2
+      name: arqueirowalkcima-Sheet_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 48
         y: 0
-        width: 32
-        height: 32
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce2258f379958e34c9b9b67fd0946f43
-      internalID: 2132429658
+      spriteID: addfdb37db78a454cbcf271bc1fc60e3
+      internalID: -1122571313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_3
+      name: arqueirowalkcima-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c7bafffd927bc4398a75d504eb9047
+      internalID: -332036089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arqueirowalkcima-Sheet_4
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
-        height: 32
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec17bf9d1d796ce46866aa0630cad544
-      internalID: 301056218
+      spriteID: de6e5a74d991ca74fb38d56c1fa8fa77
+      internalID: -538690802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_4
+      name: arqueirowalkcima-Sheet_5
       rect:
         serializedVersion: 2
-        x: 128
+        x: 120
         y: 0
-        width: 32
-        height: 32
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcf73772c85dfca41a7e191485a76520
-      internalID: 1176627288
+      spriteID: 5bc3ba76ea370574fbafeb34e09d20aa
+      internalID: -1908330830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_5
+      name: arqueirowalkcima-Sheet_6
       rect:
         serializedVersion: 2
-        x: 160
+        x: 144
         y: 0
-        width: 32
-        height: 32
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3df41035a07f3be4cba8da95b48afc00
-      internalID: 1480440362
+      spriteID: 613b3b4f99a71e24cbbc7e9ef7d021f6
+      internalID: -998297532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_6
+      name: arqueirowalkcima-Sheet_7
       rect:
         serializedVersion: 2
-        x: 192
+        x: 168
         y: 0
-        width: 32
-        height: 32
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,29 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3042fb61780b00f4aac202d9ada21da9
-      internalID: -1961113000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playeranimacaobaixo-Sheet-export_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd2b4320cdc05804982eb79a54ea89e6
-      internalID: 1293835853
+      spriteID: 3f476d95a235a0c4089a1eb54f9f0093
+      internalID: 69579633
       vertices: []
       indices: 
       edges: []
@@ -282,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      playeranimacaobaixo-Sheet-export_7: 1293835853
-      playeranimacaobaixo-Sheet-export_4: 1176627288
-      playeranimacaobaixo-Sheet-export_5: 1480440362
-      playeranimacaobaixo-Sheet-export_6: -1961113000
-      playeranimacaobaixo-Sheet-export_3: 301056218
-      playeranimacaobaixo-Sheet-export_2: 2132429658
-      playeranimacaobaixo-Sheet-export_1: 328446013
-      playeranimacaobaixo-Sheet-export_0: -38462337
+      arqueirowalkcima-Sheet_7: 69579633
+      arqueirowalkcima-Sheet_3: -332036089
+      arqueirowalkcima-Sheet_4: -538690802
+      arqueirowalkcima-Sheet_0: 408685373
+      arqueirowalkcima-Sheet_2: -1122571313
+      arqueirowalkcima-Sheet_6: -998297532
+      arqueirowalkcima-Sheet_1: 710264525
+      arqueirowalkcima-Sheet_5: -1908330830
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
