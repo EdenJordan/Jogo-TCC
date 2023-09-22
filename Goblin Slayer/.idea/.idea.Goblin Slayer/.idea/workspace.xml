@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cenario/Rocha 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cenario/Rocha 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cenario/Rocha pequena.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cenario/Rocha pequena.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Player/playeranimacaobaixo-Sheet-export.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Player/playeranimacaobaixo-Sheet-export.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileMap/Tiles/Rocha.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMap/Tiles/Rocha.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileMap/terrenos.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMap/terrenos.prefab" afterDir="false" />
-    </list>
+    <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,6 +113,7 @@
       <workItem from="1690727364919" duration="7732000" />
       <workItem from="1691843542228" duration="604000" />
       <workItem from="1691846474026" duration="130000" />
+      <workItem from="1693327597854" duration="593000" />
     </task>
     <servers />
   </component>
