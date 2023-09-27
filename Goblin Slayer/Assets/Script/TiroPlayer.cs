@@ -9,8 +9,8 @@ public class TiroPlayer : MonoBehaviour
     private GameManager _gamaManager;
     
     private float speed;
-    private float timerDestroy;
-    private float timer;
+    private float tempoParaDestroirOTiro;
+    private float tempoParaAtirar;
     
     // Start is called before the first frame update
     void Start()
@@ -19,8 +19,8 @@ public class TiroPlayer : MonoBehaviour
         _gamaManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         rig = GetComponent<Rigidbody2D>();
         speed = 8;
-        timerDestroy = 3;
-        timer = 3;
+        tempoParaDestroirOTiro = 3;
+        tempoParaAtirar = 3;
     }
 
     // Update is called once per frame
@@ -29,41 +29,43 @@ public class TiroPlayer : MonoBehaviour
         //Movimenta o tiro
         
         //Direita
-        if (player.animTiros == 1 && timer == 3 && _gamaManager.tiroAtual != 1)
+        if (player.animTiros == 1 && tempoParaAtirar == 3 && _gamaManager.tiroAtual != 1)
         {
             transform.eulerAngles = new Vector3(0, 0, 90);
             rig.velocity = Vector2.right * speed;
         }
         //Esquerda
-        else if (player.animTiros == 2 && timer == 3 && _gamaManager.tiroAtual != 1)
+        else if (player.animTiros == 2 && tempoParaAtirar == 3 && _gamaManager.tiroAtual != 1)
         {
             transform.eulerAngles = new Vector3(0, 0, -90);
             rig.velocity = Vector2.left * speed;
         }
         //Cima
-        else if (player.animTiros == 3 && timer == 3 && _gamaManager.tiroAtual != 1)
+        else if (player.animTiros == 3 && tempoParaAtirar == 3 && _gamaManager.tiroAtual != 1)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
             rig.velocity = Vector2.up * speed;
         }
         //Baixo
-        else if (player.animTiros == 4 && timer == 3 && _gamaManager.tiroAtual != 1)
+        else if (player.animTiros == 4 && tempoParaAtirar == 3 && _gamaManager.tiroAtual != 1)
         {
             transform.eulerAngles = new Vector3(0, 0, 180);
             rig.velocity = Vector2.down * speed;
         }
         
         //Destroi o tiro
-        timerDestroy -= Time.deltaTime;
-        timer -= Time.deltaTime;
+        tempoParaDestroirOTiro -= Time.deltaTime;
+        tempoParaAtirar -= Time.deltaTime;
         
-        if (timerDestroy <= 0)
+        if (tempoParaDestroirOTiro <= 0)
         {
             Destroy(gameObject);
         }
-        if (timer <= 0)
+        
+        //Tempo Para Atirar
+        if (tempoParaAtirar <= 0)
         {
-            timer = 3;
+            tempoParaAtirar = 3;
         }
     }
 }

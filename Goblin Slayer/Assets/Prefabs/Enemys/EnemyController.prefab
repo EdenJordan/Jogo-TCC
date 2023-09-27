@@ -143,9 +143,7 @@ MonoBehaviour:
   arco: {fileID: 5322009997168893029}
   _Flecha: {fileID: 2610076008157637023, guid: ad3e2798a543a8945b3b0912e037aea2, type: 3}
   localDeDisparo: {fileID: 5322009998354648243}
-  dir: {x: 0, y: 0}
-  _rotation: {x: 0, y: 0, z: 0, w: 0}
-  angle: 0
+  speedFlecha: 10
 --- !u!50 &5322009998190521294
 Rigidbody2D:
   serializedVersion: 4

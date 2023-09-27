@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4694790213549357817}
   - component: {fileID: 876081325152236029}
   - component: {fileID: 3180698064611404358}
-  - component: {fileID: 7616162215633034620}
+  - component: {fileID: -5310155811006329514}
   m_Layer: 0
   m_Name: Flecha
   m_TagString: TiroEnemy
@@ -135,7 +135,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &7616162215633034620
+--- !u!114 &-5310155811006329514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1409f13db159f9849a5f0836b34f8d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 8
 --- !u!1 &6505335243927940004
 GameObject:
   m_ObjectHideFlags: 0
