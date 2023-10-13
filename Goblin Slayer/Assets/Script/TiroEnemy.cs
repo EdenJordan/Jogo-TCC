@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class TiroEnemy : MonoBehaviour
     
     public float speed;
     private float timerdestroy;
+    private float danoParaDar = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -34,5 +36,13 @@ public class TiroEnemy : MonoBehaviour
         }
         
         rig.velocity = _Direcao * speed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            VidaPlayer.instance.DanoPlayer(danoParaDar = 2);
+        }
     }
 }

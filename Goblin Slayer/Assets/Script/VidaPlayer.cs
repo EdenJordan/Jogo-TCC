@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class VidaPlayer : MonoBehaviour
 {
+    public static VidaPlayer instance;
+    
     private Pause _pause;
     
     private float vidaMaxima;
@@ -17,19 +19,28 @@ public class VidaPlayer : MonoBehaviour
         vidaMaxima = 4;
         vidaAtual = vidaMaxima;
     }
-    
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "TiroEnemy")
         {
-            vidaAtual -= 1;
             Destroy(col.gameObject);
+        }
+    }
 
-            if (vidaAtual <= 0)
-            {
-                vidaAtual = 0;
-                _pause.GameOver();
-            }
+    public void DanoPlayer(float danoParaReceber)
+    {
+        vidaAtual -= danoParaReceber;
+
+        if (vidaAtual <= 0)
+        {
+            vidaAtual = 0;
+            _pause.GameOver();
         }
     }
 }

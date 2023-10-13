@@ -11,10 +11,8 @@ public enum EnemyState
     afastando,
     atacando
 }
-public class EnemyController : MonoBehaviour
+public class EnemyControllerArqueiro : MonoBehaviour
 {
-    //public bool _InimigoArqueiro;
-
     private Transform targetPlayer;
 
     private float _speedEnemy;

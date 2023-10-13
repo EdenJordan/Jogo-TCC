@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5322009997168893029
 Transform:
   m_ObjectHideFlags: 0
@@ -143,7 +143,6 @@ MonoBehaviour:
   arco: {fileID: 5322009997168893029}
   _Flecha: {fileID: 2610076008157637023, guid: ad3e2798a543a8945b3b0912e037aea2, type: 3}
   localDeDisparo: {fileID: 5322009998354648243}
-  speedFlecha: 10
 --- !u!50 &5322009998190521294
 Rigidbody2D:
   serializedVersion: 4
@@ -193,7 +192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cab546a067c2247afe26148fbcb01a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyArqueiro: 1
 --- !u!1 &5322009998231536968
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +203,7 @@ GameObject:
   - component: {fileID: 5322009998231536969}
   - component: {fileID: 5322009998231536970}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: SpriteEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

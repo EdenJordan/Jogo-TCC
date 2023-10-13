@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
     void Atira()
     {
         //Instanceia o tiro e calcula o tempo entre eles
-        if (!onFire)
+        if (!onFire || !onFireFisico)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
             }
             
         }
-        if (onFire)
+        if (onFire || onFireFisico)
         {
             tempoDeCadaAtaque -= Time.deltaTime;
             if (tempoDeCadaAtaque <= 0)
