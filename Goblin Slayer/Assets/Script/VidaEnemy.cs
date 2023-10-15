@@ -7,24 +7,22 @@ public class VidaEnemy : MonoBehaviour
 {
     private float vidaAtual;
     private float vidaMaxima;
-    public bool enemyArqueiro;
 
     // Start is called before the first frame update
     void Start()
     {
-        vidaMaxima = 2;
+        vidaMaxima = 3;
         vidaAtual = vidaMaxima;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "TiroPlayer" && enemyArqueiro) 
+        if (col.gameObject.tag == "TiroPlayer") 
         {
             vidaAtual -= 1;
             Destroy(col.gameObject);
@@ -34,7 +32,7 @@ public class VidaEnemy : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        if (col.gameObject.tag == "AtaquePlayer" && enemyArqueiro)
+        if (col.gameObject.tag == "AtaquePlayer")
         {
             vidaAtual -= 1;
 

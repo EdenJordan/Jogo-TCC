@@ -1,20 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TiroEnemy : MonoBehaviour
 {
-    private EnemyController _enemyController;
     private Rigidbody2D rig;
+    private GameObject _Player;
+    private Vector2 _Direcao;
+    
     public float speed;
     private float timerdestroy;
+    private float danoParaDar = 0;
     
     // Start is called before the first frame update
     void Start()
     {
-        _enemyController = GameObject.FindWithTag("Enemy").GetComponent<EnemyController>();
+        _Player = GameObject.FindWithTag("Player");
         rig = GetComponent<Rigidbody2D>();
-        timerdestroy = 3;
+        
+        _Direcao = (_Player.transform.position - transform.position).normalized;
+        
+        timerdestroy = 2.5f;
     }
 
     // Update is called once per frame
@@ -25,8 +32,17 @@ public class TiroEnemy : MonoBehaviour
         if (timerdestroy <= 0)
         {
             Destroy(gameObject);
-            timerdestroy = 3;
+            timerdestroy = 2.5f;
         }
-        rig.velocity = _enemyController.dir * -speed;
+        
+        rig.velocity = _Direcao * speed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            VidaPlayer.instance.DanoPlayer(danoParaDar = 2);
+        }
     }
 }

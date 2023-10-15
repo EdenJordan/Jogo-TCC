@@ -4,13 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="" />
+    <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyController.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/EnemyController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/EnemyController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Spawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Spawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/TiroEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TiroEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/VidaEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/VidaEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/VidaPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/VidaPlayer.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Script/EnemyControllerCorpoACorpo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Puzzles.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/VidaEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/VidaPlayer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -39,9 +52,9 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\eden3\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\eden3\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\eden3\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\anton\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\anton\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\anton\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -113,7 +126,11 @@
       <workItem from="1690727364919" duration="7732000" />
       <workItem from="1691843542228" duration="604000" />
       <workItem from="1691846474026" duration="130000" />
-      <workItem from="1693327597854" duration="593000" />
+      <workItem from="1693931851039" duration="1925000" />
+      <workItem from="1694536117267" duration="5059000" />
+      <workItem from="1695494266289" duration="6246000" />
+      <workItem from="1695584217396" duration="5390000" />
+      <workItem from="1697222801083" duration="7896000" />
     </task>
     <servers />
   </component>

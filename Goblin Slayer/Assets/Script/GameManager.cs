@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject tiroRaio;
     private Vector3 localDeDisparo;
     
-    private float timer;
+    private float tempoDeCadaAtaque;
     public float tiroAtual;
     
     public bool onFire;
@@ -50,42 +50,42 @@ public class GameManager : MonoBehaviour
     void Atira()
     {
         //Instanceia o tiro e calcula o tempo entre eles
-        if (!onFire)
+        if (!onFire || !onFireFisico)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (tiroAtual == 1)
                 {
-                    timer = 0.5f;
+                    tempoDeCadaAtaque = 0.5f;
                     onFire = true;
                     onFireFisico = true;
                     AtaqueFisico();
                 }
                 if (tiroAtual == 2)
                 {
-                    timer = 3;
+                    tempoDeCadaAtaque = 3;
                     onFire = true;
                     Instantiate(tiroFogo, localDeDisparo, tiroFogo.transform.rotation);
                 }
                 if (tiroAtual == 3)
                 {
-                    timer = 3;
+                    tempoDeCadaAtaque = 3;
                     onFire = true;
                     Instantiate(tiroGelo, localDeDisparo, tiroGelo.transform.rotation);
                 }
                 if (tiroAtual == 4)
                 {
-                    timer = 3;
+                    tempoDeCadaAtaque = 3;
                     onFire = true;
                     Instantiate(tiroRaio, localDeDisparo, tiroRaio.transform.rotation);
                 }
             }
             
         }
-        if (onFire)
+        if (onFire || onFireFisico)
         {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
+            tempoDeCadaAtaque -= Time.deltaTime;
+            if (tempoDeCadaAtaque <= 0)
             {
                 attackDireita.SetActive(false);
                 attackCima.SetActive(false);

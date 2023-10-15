@@ -7,9 +7,9 @@ TagManager:
   - TiroPlayer
   - TiroEnemy
   - Enemy
-  - Botao
   - AtaquePlayer
   - ZonaDeDano
+  - Caixa
   layers:
   - Default
   - TransparentFX

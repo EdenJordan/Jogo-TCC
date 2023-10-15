@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public enum EnemyState
@@ -10,9 +11,10 @@ public enum EnemyState
     afastando,
     atacando
 }
-public class EnemyController : MonoBehaviour
+public class EnemyControllerArqueiro : MonoBehaviour
 {
     private Transform targetPlayer;
+
     private float _speedEnemy;
     private float distance;
     public Vector3 direction;
@@ -29,12 +31,13 @@ public class EnemyController : MonoBehaviour
     public Transform arco;
     public GameObject _Flecha;
     public Transform localDeDisparo;
-    public Vector2 dir;
-    public Quaternion _rotation;
-    
+    private Vector2 dir;
+    private Vector2 _Direcao;
+    private GameObject cloneFlecha;
+
     private float timer;
-    public float angle;
-    
+    private float angle;
+
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +53,7 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         CalcularDistancia();
-        
+
         if (distance > _RangeMax)
         {
             //Nada
@@ -77,7 +80,6 @@ public class EnemyController : MonoBehaviour
         //Tiro
         dir = (arco.position - targetPlayer.position).normalized;
         angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        _rotation = Quaternion.Euler(0, 0, angle);
         arco.rotation = Quaternion.Euler(0, 0, angle);
     }
     
@@ -110,7 +112,6 @@ public class EnemyController : MonoBehaviour
         {
             _speedEnemy = 1.8f;
             transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, -(_speedEnemy) * Time.deltaTime);
-            //transform.Translate(direction * (_speedEnemy * Time.deltaTime) );
         }
         else
         {
@@ -120,8 +121,14 @@ public class EnemyController : MonoBehaviour
     void Atacando()
     {
         _speedEnemy = 0;
-        Flecha();
+        timer -= Time.deltaTime;
         
+        if (timer <= 0)
+        {
+            Instantiate(_Flecha, localDeDisparo.position, arco.rotation);
+            timer = 2;
+        }
+
         Parado();
     }
     void Aproximando()
@@ -130,7 +137,6 @@ public class EnemyController : MonoBehaviour
         {
             _speedEnemy = 1.8f;
             transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, _speedEnemy * Time.deltaTime);
-            //transform.Translate(-direction * (_speedEnemy * Time.deltaTime) );
         }
         else
         {
@@ -142,16 +148,5 @@ public class EnemyController : MonoBehaviour
         distance = Vector2.Distance(transform.position, targetPlayer.position);
         var heading = (transform.position - targetPlayer.position);
         direction = heading / distance;
-    }
-    //Tiro
-    private void Flecha()
-    {
-        timer -= Time.deltaTime;
-        
-        if (timer <= 0)
-        {
-            Instantiate(_Flecha, localDeDisparo.position, _rotation);
-            timer = 2;
-        }
     }
 }
