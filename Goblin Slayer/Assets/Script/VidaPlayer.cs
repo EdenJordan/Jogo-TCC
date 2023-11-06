@@ -9,14 +9,14 @@ public class VidaPlayer : MonoBehaviour
     
     private Pause _pause;
     
-    private float vidaMaxima;
-    private float vidaAtual;
+    public static int vidaMaxima;
+    public static int vidaAtual;
     
     // Start is called before the first frame update
     void Start()
     {
         _pause = GameObject.Find("MenuManager").GetComponent<Pause>();
-        vidaMaxima = 4;
+        vidaMaxima = 10;
         vidaAtual = vidaMaxima;
     }
 
@@ -33,7 +33,7 @@ public class VidaPlayer : MonoBehaviour
         }
     }
 
-    public void DanoPlayer(float danoParaReceber)
+    public void DanoPlayer(int danoParaReceber)
     {
         vidaAtual -= danoParaReceber;
 

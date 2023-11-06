@@ -13,9 +13,11 @@ public enum EnemyState
 }
 public class EnemyControllerArqueiro : MonoBehaviour
 {
+    public static EnemyControllerArqueiro instance;
+    
     private Transform targetPlayer;
 
-    private float _speedEnemy;
+    public float _speedEnemy;
     private float distance;
     public Vector3 direction;
 
@@ -37,7 +39,14 @@ public class EnemyControllerArqueiro : MonoBehaviour
 
     private float timer;
     private float angle;
+    
+    //=====
+    private float voltarAandar;
 
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -47,11 +56,26 @@ public class EnemyControllerArqueiro : MonoBehaviour
         targetPlayer = FindObjectOfType<PlayerController>().transform;
         //Tiro
         timer = 1;
+        
+        //=====
+        voltarAandar = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //voltar a andar
+        if (_speedEnemy == 0)
+        {
+            voltarAandar += Time.deltaTime;
+            
+            if (voltarAandar >= 2)
+            {
+                _speedEnemy = 3;
+                voltarAandar = 0;
+            }
+        }
+        
         CalcularDistancia();
 
         if (distance > _RangeMax)

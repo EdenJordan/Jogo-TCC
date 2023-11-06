@@ -62,14 +62,5 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Cima", false);
             anim.SetBool("Direita", false);
         }
-
-        if (_gameManager.onFireFisico == true)
-        {
-            _Speed = 0;
-        }
-        else
-        {
-            _Speed = 3;
-        }
     }
 }

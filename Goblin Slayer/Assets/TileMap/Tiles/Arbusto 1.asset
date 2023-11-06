@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: Arbusto 1
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 21300000, guid: 100cf44f8bcfa724690d33f75541c361, type: 3}
+  m_DefaultSprite: {fileID: -963633049, guid: 100cf44f8bcfa724690d33f75541c361, type: 3}
   m_DefaultGameObject: {fileID: 8118760036381302019, guid: e797e1095dfc8684ca62c55ab37d4c94, type: 3}
   m_DefaultColliderType: 1
   m_TilingRules: []

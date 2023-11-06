@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 371064259333347777}
   m_Layer: 0
   m_Name: EnemyCorpoACorpo
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,6 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cab546a067c2247afe26148fbcb01a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaMaxima: 10
 --- !u!114 &371064259333347777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,8 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aad54ef35058334eb0f4a04f841c253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speedEnemy: 2
   direction: {x: 0, y: 0, z: 0}
   _RangeMax: 15
+  danoParaDar: 2
   estaAtacando: 0
 --- !u!1 &371064259805390906
 GameObject:

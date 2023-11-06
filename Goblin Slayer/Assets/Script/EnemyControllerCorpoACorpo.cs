@@ -6,20 +6,33 @@ using UnityEngine;
 
 public class EnemyControllerCorpoACorpo : MonoBehaviour
 {
+    public static EnemyControllerCorpoACorpo instance;
+    
     private Transform targetPlayer;
 
-    private float _speedEnemy;
+    public float _speedEnemy;
     private float distance;
     public Vector3 direction;
     
     public float _RangeMax = 15;
     private float timer;
-    private float danoParaDar = 0;
+    
+    public int danoParaDar;
     public bool estaAtacando;
-
+    
+    //=====
+    private float voltarAandar;
+    
+    private void Awake()
+    {
+        instance = this;
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
+        voltarAandar = 0;
+        //=====
         _speedEnemy = 2;
         targetPlayer = FindObjectOfType<PlayerController>().transform;
         //Tiro
@@ -29,6 +42,18 @@ public class EnemyControllerCorpoACorpo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //voltar a andar
+        if (_speedEnemy == 0)
+        {
+            voltarAandar += Time.deltaTime;
+            
+            if (voltarAandar >= 2)
+            {
+                _speedEnemy = 2;
+                voltarAandar = 0;
+            }
+        }
+        //=======
         CalcularDistancia();
 
         if (distance > _RangeMax)
@@ -48,7 +73,7 @@ public class EnemyControllerCorpoACorpo : MonoBehaviour
         if (timer <= 0)
         {
             estaAtacando = true;
-            VidaPlayer.instance.DanoPlayer(danoParaDar = 2);
+            VidaPlayer.instance.DanoPlayer(danoParaDar);
             timer = 2;
         }
         else

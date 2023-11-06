@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    //Vida
+    public Text vidaPlayer;
+
     //Trios
     public GameObject tiroFogo;
     public GameObject tiroGelo;
@@ -39,6 +43,8 @@ public class GameManager : MonoBehaviour
         ProcurarObjetos();
         Atira();
         EscolherTiro();
+
+        vidaPlayer.text = "❤ x " + VidaPlayer.vidaAtual;
     }
 
     void ProcurarObjetos()
@@ -49,33 +55,38 @@ public class GameManager : MonoBehaviour
 
     void Atira()
     {
-        //Instanceia o tiro e calcula o tempo entre eles
-        if (!onFire || !onFireFisico)
+        if (!onFireFisico)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (tiroAtual == 1)
                 {
-                    tempoDeCadaAtaque = 0.5f;
-                    onFire = true;
+                    tempoDeCadaAtaque = 0.3f;
                     onFireFisico = true;
                     AtaqueFisico();
                 }
+            }
+        }
+        //Instanceia o tiro e calcula o tempo entre eles
+        if (!onFire)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
                 if (tiroAtual == 2)
                 {
-                    tempoDeCadaAtaque = 3;
+                    tempoDeCadaAtaque = 2;
                     onFire = true;
                     Instantiate(tiroFogo, localDeDisparo, tiroFogo.transform.rotation);
                 }
                 if (tiroAtual == 3)
                 {
-                    tempoDeCadaAtaque = 3;
+                    tempoDeCadaAtaque = 2;
                     onFire = true;
                     Instantiate(tiroGelo, localDeDisparo, tiroGelo.transform.rotation);
                 }
                 if (tiroAtual == 4)
                 {
-                    tempoDeCadaAtaque = 3;
+                    tempoDeCadaAtaque = 2;
                     onFire = true;
                     Instantiate(tiroRaio, localDeDisparo, tiroRaio.transform.rotation);
                 }
@@ -85,6 +96,7 @@ public class GameManager : MonoBehaviour
         if (onFire || onFireFisico)
         {
             tempoDeCadaAtaque -= Time.deltaTime;
+            
             if (tempoDeCadaAtaque <= 0)
             {
                 attackDireita.SetActive(false);

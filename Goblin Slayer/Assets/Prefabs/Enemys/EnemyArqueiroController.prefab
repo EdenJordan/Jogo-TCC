@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 5322009998190521293}
   - component: {fileID: 3334502349261004370}
   m_Layer: 0
-  m_Name: EnemyController
+  m_Name: EnemyArqueiroController
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04e148472cb61684bb3952403933768d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speedEnemy: 3
   direction: {x: 0, y: 0, z: 0}
   _RangeMax: 10
   _RangeMin: 3
@@ -192,6 +193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cab546a067c2247afe26148fbcb01a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaMaxima: 5
+  rig: {fileID: 5322009998190521294}
 --- !u!1 &5322009998231536968
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +206,7 @@ GameObject:
   - component: {fileID: 5322009998231536969}
   - component: {fileID: 5322009998231536970}
   m_Layer: 0
-  m_Name: SpriteEnemy
+  m_Name: SpriteEnemyArqueiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
