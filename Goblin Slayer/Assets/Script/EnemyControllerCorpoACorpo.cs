@@ -9,106 +9,96 @@ public class EnemyControllerCorpoACorpo : MonoBehaviour
     public static EnemyControllerCorpoACorpo instance;
     
     private Transform targetPlayer;
-
-    public float _speedEnemy;
-    private float distance;
-    public Vector3 direction;
-    
-    public float _RangeMax = 15;
-    private float timer;
-    
-    public int danoParaDar;
-    public bool estaAtacando;
-    
-    //=====
-    private float voltarAandar;
-    
     private void Awake()
     {
         instance = this;
     }
     
-    // Start is called before the first frame update
+    public float moveSpeed = 2.0f;
+    public float attackRange = 1.5f;
+
+    private Transform player;
+    public int danoParaDar;
+    public bool dano = false;
+    
+    public GameObject ataque;
+    public bool podeAtacar;
+    private float timeFire = 0;
+
+    private float voltarAandar;
+
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        
+        ataque.SetActive(false);
+        podeAtacar = false;
+        dano = true;
+
         voltarAandar = 0;
-        //=====
-        _speedEnemy = 2;
-        targetPlayer = FindObjectOfType<PlayerController>().transform;
-        //Tiro
-        timer = 1;
     }
 
-    // Update is called once per frame
     void Update()
     {
         //voltar a andar
-        if (_speedEnemy == 0)
+        if (moveSpeed == 0)
         {
             voltarAandar += Time.deltaTime;
             
             if (voltarAandar >= 2)
             {
-                _speedEnemy = 2;
+                moveSpeed = 2;
                 voltarAandar = 0;
             }
         }
-        //=======
-        CalcularDistancia();
-
-        if (distance > _RangeMax)
+        //===============================
+        timeFire += Time.deltaTime;
+        
+        if (podeAtacar)
         {
-            _speedEnemy = 0;
+            if (timeFire >= 1)
+            {
+                ataque.SetActive(false);
+            }
+            if (timeFire >= 2)
+            {
+                podeAtacar = false;
+            }
+        }
+        //===============================
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+
+        if (distanceToPlayer <= attackRange)
+        {
+            if (!podeAtacar)
+            {
+                if (ataque != null)
+                {
+                    podeAtacar = true;
+                    ataque.SetActive(true);
+                    timeFire = 0;
+                }
+            }
         }
         else
         {
-            Aproximando();
+            transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
         }
     }
-    void Atacando()
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        _speedEnemy = 0;
-        timer -= Time.deltaTime;
-            
-        if (timer <= 0)
+        if (col.gameObject.CompareTag("ZonaDeDano"))
         {
-            estaAtacando = true;
-            VidaPlayer.instance.DanoPlayer(danoParaDar);
-            timer = 2;
-        }
-        else
-        {
-            estaAtacando = false;
-        }
-    }
-    void Aproximando()
-    {
-        if (!estaAtacando)
-        {
-            _speedEnemy = 2;
-            transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, _speedEnemy * Time.deltaTime);
-        }
-    }
-    void CalcularDistancia()
-    {
-        distance = Vector2.Distance(transform.position, targetPlayer.position);
-        var heading = (transform.position - targetPlayer.position);
-        direction = heading / distance;
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            Atacando();
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            _speedEnemy = 2;
+            if (ataque != null)
+            {
+                float timeDano = 0;
+                timeDano += Time.deltaTime;
+                if (timeDano >= 2)
+                {
+                    VidaPlayer.instance.DanoPlayer(danoParaDar);
+                    timeDano = 0;
+                }
+            }
         }
     }
 }

@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class Boss : MonoBehaviour
 {
@@ -186,17 +188,12 @@ public class Boss : MonoBehaviour
 
     void Morte()
     {
-        // Implemente o que acontece quando o boss morre (por exemplo, destruir o objeto ou ativar uma animação de morte)
         Destroy(gameObject);
     }
     
     //dano ao jogador
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("TiroPlayer"))
-        {
-            speed = 0;
-        }
         if (col.gameObject.CompareTag("AtaquePlayer"))
         {
             TakeDamage(2);

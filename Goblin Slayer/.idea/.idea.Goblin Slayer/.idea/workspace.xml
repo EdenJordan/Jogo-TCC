@@ -6,29 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cenario/Arbusto.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cenario/Arbusto.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cenario/Arbustopequeno.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cenario/Arbustopequeno.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cenario/Rocha pequena.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cenario/Rocha pequena.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyController.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyController.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyCorpoACorpo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyCorpoACorpo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tiros/Flecha.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tiros/Flecha.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tiros/tiroFogo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tiros/tiroFogo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tiros/tiroGelo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tiros/tiroGelo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tiros/tiroRaio.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tiros/tiroRaio.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/EnemyControllerArqueiro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EnemyControllerArqueiro.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Boss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Boss.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/EnemyControllerCorpoACorpo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EnemyControllerCorpoACorpo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TiroEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TiroEnemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/TiroPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TiroPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/VidaEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/VidaEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/VidaPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/VidaPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Cenario/arbustopequeno.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Cenario/arbustopequeno.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileMap/Tiles/Arbusto 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMap/Tiles/Arbusto 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileMap/terrenos.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMap/terrenos.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +129,7 @@
       <workItem from="1699136192418" duration="3716000" />
       <workItem from="1699208578206" duration="17686000" />
       <workItem from="1699230806772" duration="3294000" />
+      <workItem from="1699567312253" duration="13099000" />
     </task>
     <servers />
   </component>

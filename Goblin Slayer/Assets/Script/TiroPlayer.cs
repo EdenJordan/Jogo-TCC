@@ -125,7 +125,7 @@ public class TiroPlayer : MonoBehaviour
             {
                 danoParaDar = 1;
                 VidaEnemy.instance.vida(danoParaDar);
-                EnemyControllerCorpoACorpo.instance._speedEnemy = 0;
+                EnemyControllerCorpoACorpo.instance.moveSpeed = 0;
                 Destroy(gameObject);
             }
             if (tiroRaio)
