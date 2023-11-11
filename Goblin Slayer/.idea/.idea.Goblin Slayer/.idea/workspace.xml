@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Boss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Boss.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/EnemyControllerCorpoACorpo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EnemyControllerCorpoACorpo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TiroPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TiroPlayer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Script/DanoEnemyCaC.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/EnemyControllerCorpoACorpo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Puzzles.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/VidaEnemy.cs" root0="FORCE_HIGHLIGHTING" />
@@ -130,6 +130,7 @@
       <workItem from="1699208578206" duration="17686000" />
       <workItem from="1699230806772" duration="3294000" />
       <workItem from="1699567312253" duration="13099000" />
+      <workItem from="1699654291978" duration="6054000" />
     </task>
     <servers />
   </component>

@@ -94,11 +94,17 @@ public class Boss : MonoBehaviour
             {
                 if (isFollowingPlayer)
                 {
-                    // Se o boss estiver seguindo o jogador, atualize o temporizador
-                    followTimer -= Time.deltaTime;
-                    transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-
-                    if (followTimer <= 0f)
+                    if (distanceToPlayer >= attackRange)
+                    {
+                        // Se o boss estiver seguindo o jogador, atualize o temporizador
+                        followTimer -= Time.deltaTime;
+                        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+                        if (followTimer <= 0f)
+                        {
+                            isFollowingPlayer = false;
+                        }
+                    }
+                    else
                     {
                         isFollowingPlayer = false;
                     }

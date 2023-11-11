@@ -8,7 +8,6 @@ public class EnemyControllerCorpoACorpo : MonoBehaviour
 {
     public static EnemyControllerCorpoACorpo instance;
     
-    private Transform targetPlayer;
     private void Awake()
     {
         instance = this;
@@ -18,11 +17,9 @@ public class EnemyControllerCorpoACorpo : MonoBehaviour
     public float attackRange = 1.5f;
 
     private Transform player;
-    public int danoParaDar;
-    public bool dano = false;
-    
+
     public GameObject ataque;
-    public bool podeAtacar;
+    public bool estaAtacando;
     private float timeFire = 0;
 
     private float voltarAandar;
@@ -32,8 +29,6 @@ public class EnemyControllerCorpoACorpo : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         
         ataque.SetActive(false);
-        podeAtacar = false;
-        dano = true;
 
         voltarAandar = 0;
     }
@@ -51,54 +46,36 @@ public class EnemyControllerCorpoACorpo : MonoBehaviour
                 voltarAandar = 0;
             }
         }
-        //===============================
-        timeFire += Time.deltaTime;
-        
-        if (podeAtacar)
+        //Tempo entre os ataques
+        if (estaAtacando)
         {
+            timeFire += Time.deltaTime;
+            
             if (timeFire >= 1)
             {
                 ataque.SetActive(false);
             }
             if (timeFire >= 2)
             {
-                podeAtacar = false;
+                estaAtacando = false;
             }
         }
-        //===============================
+
+        //ataque e perseguição
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
         if (distanceToPlayer <= attackRange)
         {
-            if (!podeAtacar)
+            if (!estaAtacando)
             {
-                if (ataque != null)
-                {
-                    podeAtacar = true;
-                    ataque.SetActive(true);
-                    timeFire = 0;
-                }
+                estaAtacando = true;
+                ataque.SetActive(true);
+                timeFire = 0;
             }
         }
         else
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.CompareTag("ZonaDeDano"))
-        {
-            if (ataque != null)
-            {
-                float timeDano = 0;
-                timeDano += Time.deltaTime;
-                if (timeDano >= 2)
-                {
-                    VidaPlayer.instance.DanoPlayer(danoParaDar);
-                    timeDano = 0;
-                }
-            }
         }
     }
 }
