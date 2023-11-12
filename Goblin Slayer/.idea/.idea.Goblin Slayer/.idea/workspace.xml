@@ -6,23 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyCorpoACorpo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyCorpoACorpo.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Boss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Boss.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/EnemyControllerCorpoACorpo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EnemyControllerCorpoACorpo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Pause.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Pause.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Script/DanoEnemyCaC.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/EnemyControllerCorpoACorpo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Puzzles.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/VidaEnemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/VidaPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -131,6 +122,8 @@
       <workItem from="1699230806772" duration="3294000" />
       <workItem from="1699567312253" duration="13099000" />
       <workItem from="1699654291978" duration="6054000" />
+      <workItem from="1699739398252" duration="3441000" />
+      <workItem from="1699745073280" duration="3100000" />
     </task>
     <servers />
   </component>

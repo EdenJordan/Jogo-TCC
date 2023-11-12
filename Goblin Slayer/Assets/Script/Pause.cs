@@ -8,6 +8,7 @@ public class Pause : MonoBehaviour
 {
     public GameObject painelPause;
     public GameObject painelGameOver;
+    public GameObject painelEscolherPergaminho;
 
     private bool isGameOver;
 
@@ -34,6 +35,16 @@ public class Pause : MonoBehaviour
                 Time.timeScale = 0;
             }
         }
+
+        if (painelEscolherPergaminho.activeSelf)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+        
     }
     public void VoltarPause()
     {
@@ -51,5 +62,22 @@ public class Pause : MonoBehaviour
         Time.timeScale = 0;
         isGameOver = true;
         painelGameOver.SetActive(true);
+    }
+    
+    public void SubstituirPergaminhoFogo()
+    {
+        GameManager.instance.pergaminhoFogo = false;
+        painelEscolherPergaminho.SetActive(false);
+    }
+    
+    public void SubstituirPergaminhoGelo()
+    {
+        GameManager.instance.pergaminhoGelo = false;
+        painelEscolherPergaminho.SetActive(false);
+    }
+
+    public void FecharSelecaoDePergaminhos()
+    {
+        painelEscolherPergaminho.SetActive(false);
     }
 }

@@ -1,14 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Timeline;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    //Hud
+    public GameObject slot1;
+    public GameObject slot2;
+    public GameObject slot3;
+    public GameObject slot4;
+    
     //Vida
     public Text vidaPlayer;
 
-    //Trios
+    //Tiros
     public GameObject tiroFogo;
     public GameObject tiroGelo;
     public GameObject tiroRaio;
@@ -19,7 +27,10 @@ public class GameManager : MonoBehaviour
     
     public bool onFire;
     public bool onFireFisico;
-    
+
+    public bool pergaminhoFogo;
+    public bool pergaminhoGelo;
+
     //Ataque Fisicos
     public GameObject attackDireita;
     public GameObject attackCima;
@@ -27,7 +38,13 @@ public class GameManager : MonoBehaviour
     
     //Outras coisas
     private PlayerController _playerController;
-    
+    public static GameManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +52,12 @@ public class GameManager : MonoBehaviour
         onFireFisico = false;
         tiroAtual = 1;
         ProcurarObjetos();
+        
+        //hud
+        slot1.SetActive(true); //espada
+        slot2.SetActive(false); //escudo
+        slot3.SetActive(false); //pergaminho1
+        slot4.SetActive(false); //pergaminho2
     }
 
     // Update is called once per frame
@@ -43,6 +66,7 @@ public class GameManager : MonoBehaviour
         ProcurarObjetos();
         Atira();
         EscolherTiro();
+        HudMenu();
 
         vidaPlayer.text = "❤ x " + VidaPlayer.vidaAtual;
     }
@@ -59,7 +83,7 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (tiroAtual == 1)
+                if (tiroAtual == 1) //espada
                 {
                     tempoDeCadaAtaque = 0.3f;
                     onFireFisico = true;
@@ -72,19 +96,20 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (tiroAtual == 2)
+                if (tiroAtual == 2) //tirofogo
                 {
                     tempoDeCadaAtaque = 2;
                     onFire = true;
                     Instantiate(tiroFogo, localDeDisparo, tiroFogo.transform.rotation);
                 }
-                if (tiroAtual == 3)
+                if (tiroAtual == 3)//tirogelo
                 {
                     tempoDeCadaAtaque = 2;
                     onFire = true;
                     Instantiate(tiroGelo, localDeDisparo, tiroGelo.transform.rotation);
                 }
-                if (tiroAtual == 4)
+
+                if (tiroAtual == 4) //tiroraio
                 {
                     tempoDeCadaAtaque = 2;
                     onFire = true;
@@ -110,21 +135,31 @@ public class GameManager : MonoBehaviour
 
     void EscolherTiro()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            tiroAtual = 1; //espada
+        }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            tiroAtual = 1;
+            if (pergaminhoFogo)
+            {
+                tiroAtual = 2; //tirofogo
+            }
+            else
+            {
+                tiroAtual = 4; //tiroraio
+            }
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            tiroAtual = 2;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            tiroAtual = 3;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            tiroAtual = 4;
+            if (pergaminhoGelo)
+            {
+                tiroAtual = 3; //tirogelo
+            }
+            else
+            {
+                tiroAtual = 4; //tiroraio
+            }
         }
     }
 
@@ -143,6 +178,38 @@ public class GameManager : MonoBehaviour
         if (_playerController.animTiros == 4)
         {
             attackBaixo.SetActive(true);
+        }
+    }
+
+    public void HudMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            slot1.SetActive(true); //espada
+            slot2.SetActive(false); //escudo
+            slot3.SetActive(false); //pergaminho1
+            slot4.SetActive(false); //pergaminho2
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            slot1.SetActive(false); //espada
+            slot2.SetActive(true); //escudo
+            slot3.SetActive(false); //pergaminho1
+            slot4.SetActive(false); //pergaminho2
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            slot1.SetActive(false); //espada
+            slot2.SetActive(false); //escudo
+            slot3.SetActive(true); //pergaminho1
+            slot4.SetActive(false); //pergaminho2
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            slot1.SetActive(false); //espada
+            slot2.SetActive(false); //escudo
+            slot3.SetActive(false); //pergaminho1
+            slot4.SetActive(true); //pergaminho2
         }
     }
 }
