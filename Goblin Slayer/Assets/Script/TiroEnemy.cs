@@ -12,6 +12,8 @@ public class TiroEnemy : MonoBehaviour
     public float speed;
     private float timerdestroy;
     public int danoParaDar;
+
+    public bool tiroGelo;
     
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,10 @@ public class TiroEnemy : MonoBehaviour
         if (col.gameObject.CompareTag("ZonaDeDano"))
         {
             VidaPlayer.instance.DanoPlayer(danoParaDar);
+            if (tiroGelo)
+            {
+                PlayerController.instance._Speed = 0;
+            }
         }
     }
 }

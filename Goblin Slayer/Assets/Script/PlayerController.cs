@@ -5,13 +5,22 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+    
     private GameManager _gameManager;
     private GameObject player;
     private Animator anim;
     
     public float _Speed;
     public int animTiros;
-    
+
+    private float voltarAandar;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
         animTiros = 4;
@@ -22,6 +31,18 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        //voltar a andar
+        if (_Speed == 0)
+        {
+            voltarAandar += Time.deltaTime;
+            
+            if (voltarAandar >= 2)
+            {
+                _Speed = 3;
+                voltarAandar = 0;
+            }
+        }
+        //============
         Move();
     }
 

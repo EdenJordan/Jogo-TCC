@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class Pause : MonoBehaviour
             }
         }
 
-        if (painelEscolherPergaminho.activeSelf)
+        if (painelEscolherPergaminho.activeSelf || painelGameOver.activeSelf)
         {
             Time.timeScale = 0;
         }
@@ -63,7 +64,16 @@ public class Pause : MonoBehaviour
         isGameOver = true;
         painelGameOver.SetActive(true);
     }
-    
+
+    public void ReiniciarCena()
+    {
+        // Obtém o índice da cena atual
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        // Carrega a cena atual novamente
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
     public void SubstituirPergaminhoFogo()
     {
         GameManager.instance.pergaminhoFogo = false;

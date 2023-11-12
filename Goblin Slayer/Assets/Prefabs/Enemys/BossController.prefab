@@ -167,17 +167,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   barraDeVida: {fileID: 1535247980637821504}
-  fogoBallPrefab: {fileID: 0}
-  raioBallPrefab: {fileID: 0}
-  geloBallPrefab: {fileID: 0}
+  fogoBallPrefab: {fileID: 6350422396344668515, guid: 357951c7ccad9824a95f92f90ad6cdfc, type: 3}
+  geloBallPrefab: {fileID: 4213357170534592192, guid: ddfb3c695aea8544fa0451e68bfaead8, type: 3}
+  raioBallPrefab: {fileID: 4752263723573966718, guid: 42ecaf337059d49488483e1baf805bfd, type: 3}
   ataqueBastao: {fileID: 1535247982219315076}
-  attackRange: 2.1
+  attackRange: 1.6
   attackCooldown: 2
   danoParaDar: 1
   isFire: 0
+  estaAtacando: 0
   isFollowingPlayer: 0
   speed: 2
-  rig: {fileID: 1535247980757892643}
 --- !u!50 &1535247980757892643
 Rigidbody2D:
   serializedVersion: 4

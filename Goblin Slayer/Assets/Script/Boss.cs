@@ -8,24 +8,26 @@ using Random = UnityEngine.Random;
 public class Boss : MonoBehaviour
 {
     public static Boss instance;
+    private GameObject player;
+    private float angle;
     
     //vida do boss
     public int maxHealth;
     private int currentHealth;
     public Slider barraDeVida;
     
-    //gameObjects
+    //ataque
     public GameObject fogoBallPrefab;
-    public GameObject raioBallPrefab;
     public GameObject geloBallPrefab;
+    public GameObject raioBallPrefab;
     public GameObject ataqueBastao;
-    
-    //tiros
+
     public float attackRange = 5f;
     public float attackCooldown = 2f;
     private float lastAttackTime = 0f;
     public int danoParaDar;
     public bool isFire;
+    public bool estaAtacando;
     private float timeFire;
 
     //seguir jogador 
@@ -73,21 +75,36 @@ public class Boss : MonoBehaviour
         //barra de vida
         barraDeVida.value = currentHealth;
         
-        //desativa o ataque fisico
+        //desativa o ataque
         timeFire += Time.deltaTime;
-        if (timeFire >= 0.7f)
+        
+        if (timeFire >= 0.8f)
         {
             isFire = false;
             ataqueBastao.SetActive(false);
             timeFire = 0;
         }
-        
+
         //procura o jogador
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         
+        //Tiro
+        Vector2 direcao = (transform.position - player.transform.position).normalized;
+        angle = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
+
         //segeue o jogador 
         if (player != null)
         {
+            if (!isFollowingPlayer)
+            {
+                followTimer += Time.deltaTime;
+                if (followTimer >= 1f)
+                {
+                    isFollowingPlayer = true;
+                    followTimer = 2f;
+                }
+            }
+
             float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
             if (player.transform.position != transform.position)
@@ -119,27 +136,11 @@ public class Boss : MonoBehaviour
             if (!isFollowingPlayer && distanceToPlayer < attackRange && Time.time - lastAttackTime > attackCooldown)
             {
                 AttackMelee(player);
-
-                followTimer += Time.deltaTime;
-
-                if (followTimer >= 1f)
-                {
-                    followTimer = 2f;
-                    isFollowingPlayer = true;
-                }
             }
             //ataque a distancia
-            else if (!isFollowingPlayer)
+            if (!isFollowingPlayer && distanceToPlayer > attackRange && Time.time - lastAttackTime > attackCooldown)
             {
                 AttackMagic();
-                
-                followTimer += Time.deltaTime;
-                
-                if (followTimer >= 1f)
-                {
-                    followTimer = 2f;
-                    isFollowingPlayer = true;
-                }
             }
         }
     }
@@ -176,7 +177,7 @@ public class Boss : MonoBehaviour
         if (magicPrefab != null)
         {
             // Instanciar o ataque mágico (por exemplo, instanciar uma bola de fogo)
-            Instantiate(magicPrefab, transform.position, Quaternion.identity);
+            Instantiate(magicPrefab, transform.position, Quaternion.Euler(0,0,angle + 90));
             lastAttackTime = Time.time;
         }
     }

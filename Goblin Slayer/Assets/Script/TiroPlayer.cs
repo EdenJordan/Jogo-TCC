@@ -146,6 +146,7 @@ public class TiroPlayer : MonoBehaviour
             if (tiroGelo)
             {
                 danoParaDar = 1;
+                Boss.instance.speed = 0;
                 Boss.instance.TakeDamage(danoParaDar);
                 Destroy(gameObject);
             }
