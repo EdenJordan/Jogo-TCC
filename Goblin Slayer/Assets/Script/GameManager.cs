@@ -30,7 +30,8 @@ public class GameManager : MonoBehaviour
 
     public bool pergaminhoFogo;
     public bool pergaminhoGelo;
-
+    public bool pergaminhoRaio;
+    
     //Ataque Fisicos
     public GameObject attackDireita;
     public GameObject attackCima;
@@ -96,24 +97,37 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (tiroAtual == 2) //tirofogo
+                if (tiroAtual == 2)
+                {
+                    tempoDeCadaAtaque = 3;
+                    VidaPlayer.instance.escudo = true;
+                }
+                if (tiroAtual == 3) //tirofogo
                 {
                     tempoDeCadaAtaque = 2;
                     onFire = true;
                     Instantiate(tiroFogo, localDeDisparo, tiroFogo.transform.rotation);
                 }
-                if (tiroAtual == 3)//tirogelo
+                if (tiroAtual == 4)//tirogelo
                 {
                     tempoDeCadaAtaque = 2;
                     onFire = true;
                     Instantiate(tiroGelo, localDeDisparo, tiroGelo.transform.rotation);
                 }
 
-                if (tiroAtual == 4) //tiroraio
+                if (tiroAtual == 5) //tiroraio
                 {
                     tempoDeCadaAtaque = 2;
                     onFire = true;
                     Instantiate(tiroRaio, localDeDisparo, tiroRaio.transform.rotation);
+                }
+            }
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                if (tiroAtual == 2)
+                {
+                    tempoDeCadaAtaque = 3;
+                    VidaPlayer.instance.escudo = false;
                 }
             }
             
@@ -129,6 +143,7 @@ public class GameManager : MonoBehaviour
                 attackBaixo.SetActive(false);
                 onFire = false;
                 onFireFisico = false;
+                VidaPlayer.instance.escudo = false;
             }
         }
     }
@@ -139,26 +154,31 @@ public class GameManager : MonoBehaviour
         {
             tiroAtual = 1; //espada
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            tiroAtual = 2; //escudo
+        }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             if (pergaminhoFogo)
             {
-                tiroAtual = 2; //tirofogo
+                tiroAtual = 3; //tirofogo
             }
-            else
+            if (pergaminhoRaio)
             {
-                tiroAtual = 4; //tiroraio
+                tiroAtual = 5; //tiroraio
             }
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             if (pergaminhoGelo)
             {
-                tiroAtual = 3; //tirogelo
+                tiroAtual = 4; //tirogelo
             }
-            else
+            if (pergaminhoRaio)
             {
-                tiroAtual = 4; //tiroraio
+                tiroAtual = 5; //tiroraio
             }
         }
     }

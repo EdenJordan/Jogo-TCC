@@ -77,12 +77,14 @@ public class Pause : MonoBehaviour
     public void SubstituirPergaminhoFogo()
     {
         GameManager.instance.pergaminhoFogo = false;
+        GameManager.instance.pergaminhoRaio = true;
         painelEscolherPergaminho.SetActive(false);
     }
     
     public void SubstituirPergaminhoGelo()
     {
         GameManager.instance.pergaminhoGelo = false;
+        GameManager.instance.pergaminhoRaio = true;
         painelEscolherPergaminho.SetActive(false);
     }
 

@@ -48,6 +48,7 @@ public class TiroEnemy : MonoBehaviour
             if (tiroGelo)
             {
                 PlayerController.instance._Speed = 0;
+                PlayerController.instance.estaCongelado = true;
             }
         }
     }
