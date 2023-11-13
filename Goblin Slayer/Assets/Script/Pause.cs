@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
     public GameObject painelPause;
     public GameObject painelGameOver;
+    public GameObject painelEscolherPergaminho;
 
     private bool isGameOver;
 
@@ -34,6 +36,16 @@ public class Pause : MonoBehaviour
                 Time.timeScale = 0;
             }
         }
+
+        if (painelEscolherPergaminho.activeSelf || painelGameOver.activeSelf)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+        
     }
     public void VoltarPause()
     {
@@ -51,5 +63,33 @@ public class Pause : MonoBehaviour
         Time.timeScale = 0;
         isGameOver = true;
         painelGameOver.SetActive(true);
+    }
+
+    public void ReiniciarCena()
+    {
+        // Obtém o índice da cena atual
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        // Carrega a cena atual novamente
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    public void SubstituirPergaminhoFogo()
+    {
+        GameManager.instance.pergaminhoFogo = false;
+        GameManager.instance.pergaminhoRaio = true;
+        painelEscolherPergaminho.SetActive(false);
+    }
+    
+    public void SubstituirPergaminhoGelo()
+    {
+        GameManager.instance.pergaminhoGelo = false;
+        GameManager.instance.pergaminhoRaio = true;
+        painelEscolherPergaminho.SetActive(false);
+    }
+
+    public void FecharSelecaoDePergaminhos()
+    {
+        painelEscolherPergaminho.SetActive(false);
     }
 }

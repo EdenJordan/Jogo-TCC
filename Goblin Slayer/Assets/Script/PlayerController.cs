@@ -5,13 +5,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+    
     private GameManager _gameManager;
     private GameObject player;
     private Animator anim;
     
     public float _Speed;
     public int animTiros;
-    
+
+    private float voltarAandar;
+    public bool estaCongelado = false;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
         animTiros = 4;
@@ -22,6 +32,20 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        //voltar a andar
+        if (estaCongelado)
+        {
+            voltarAandar += Time.deltaTime;
+            
+            if (voltarAandar >= 2)
+            {
+                _Speed = 3;
+                estaCongelado = false;
+                voltarAandar = 0;
+                
+            }
+        }
+        //============
         Move();
     }
 
@@ -34,42 +58,36 @@ public class PlayerController : MonoBehaviour
         //transform.Translate(_Moviment*Time.deltaTime);
         GetComponent<Rigidbody2D>().velocity = _Moviment;
 
-        if (_H > 0 && !_gameManager.onFireFisico)
+        if (VidaPlayer.instance.escudo == false)
         {
-            animTiros = 1;
-            transform.eulerAngles = new Vector2(0, 0);
-            anim.SetBool("Direita", true);
-            anim.SetBool("Cima", false);
-        }
-        if (_H < 0 && !_gameManager.onFireFisico)
-        {
-            animTiros = 2;
-            transform.eulerAngles = new Vector2(0, 180);
-            anim.SetBool("Direita", true);
-            anim.SetBool("Cima", false);
-        }
-        if (_V > 0 && !_gameManager.onFireFisico)
-        {
-            animTiros = 3;
-            transform.eulerAngles = new Vector2(0, 0);
-            anim.SetBool("Cima", true);
-            anim.SetBool("Direita", false);
-        }
-        if (_V < 0 && !_gameManager.onFireFisico)
-        {
-            animTiros = 4;
-            transform.eulerAngles = new Vector2(0, 0);
-            anim.SetBool("Cima", false);
-            anim.SetBool("Direita", false);
-        }
-
-        if (_gameManager.onFireFisico == true)
-        {
-            _Speed = 0;
-        }
-        else
-        {
-            _Speed = 3;
+            if (_H > 0 && !_gameManager.onFireFisico)
+            {
+                animTiros = 1;
+                transform.eulerAngles = new Vector2(0, 0);
+                anim.SetBool("Direita", true);
+                anim.SetBool("Cima", false);
+            }
+            if (_H < 0 && !_gameManager.onFireFisico)
+            {
+                animTiros = 2;
+                transform.eulerAngles = new Vector2(0, 180);
+                anim.SetBool("Direita", true);
+                anim.SetBool("Cima", false);
+            }
+            if (_V > 0 && !_gameManager.onFireFisico)
+            {
+                animTiros = 3;
+                transform.eulerAngles = new Vector2(0, 0);
+                anim.SetBool("Cima", true);
+                anim.SetBool("Direita", false);
+            }
+            if (_V < 0 && !_gameManager.onFireFisico)
+            {
+                animTiros = 4;
+                transform.eulerAngles = new Vector2(0, 0);
+                anim.SetBool("Cima", false);
+                anim.SetBool("Direita", false);
+            }
         }
     }
 }

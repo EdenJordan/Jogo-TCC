@@ -6,12 +6,13 @@ using UnityEngine;
 public class Puzzles : MonoBehaviour
 {
     public GameObject ponte;
-    private bool colisao;
     private float timer;
+    public int quantidadeDeObjetos;
 
     // Start is called before the first frame update
     void Start()
     {
+        quantidadeDeObjetos = 0;
         timer = 1;
         ponte.GetComponent<SpriteRenderer>().color = new Color(0.4056604f, 0.4056604f, 0.4056604f, 0);
     }
@@ -19,7 +20,7 @@ public class Puzzles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (colisao == false)
+        if (quantidadeDeObjetos <= 0)
         {
             timer -= Time.deltaTime;
             
@@ -31,21 +32,26 @@ public class Puzzles : MonoBehaviour
         }
     }
 
-    void OnTriggerStay2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player" || col.gameObject.tag == "Caixa")
         {
             timer = 1;
-            colisao = true;
+            quantidadeDeObjetos++;
             ponte.GetComponent<SpriteRenderer>().color = new Color(0.4056604f, 0.4056604f, 0.4056604f, 1);
             ponte.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
+
+    /*void OnTriggerStay2D(Collider2D col)
+    {
+        
+    }*/
     void OnTriggerExit2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player" || col.gameObject.tag == "Caixa")
         {
-            colisao = false;
+            quantidadeDeObjetos--;
         }
     }
 }

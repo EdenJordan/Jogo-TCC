@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+  danoParaDar: 2
 --- !u!1 &6505335243927940004
 GameObject:
   m_ObjectHideFlags: 0

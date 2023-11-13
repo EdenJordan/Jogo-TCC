@@ -11,7 +11,9 @@ public class TiroEnemy : MonoBehaviour
     
     public float speed;
     private float timerdestroy;
-    private float danoParaDar = 0;
+    public int danoParaDar;
+
+    public bool tiroGelo;
     
     // Start is called before the first frame update
     void Start()
@@ -40,9 +42,14 @@ public class TiroEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.CompareTag("ZonaDeDano"))
         {
-            VidaPlayer.instance.DanoPlayer(danoParaDar = 2);
+            VidaPlayer.instance.DanoPlayer(danoParaDar);
+            if (tiroGelo)
+            {
+                PlayerController.instance._Speed = 0;
+                PlayerController.instance.estaCongelado = true;
+            }
         }
     }
 }

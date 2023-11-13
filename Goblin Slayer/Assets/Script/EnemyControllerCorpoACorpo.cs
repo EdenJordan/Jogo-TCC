@@ -6,84 +6,76 @@ using UnityEngine;
 
 public class EnemyControllerCorpoACorpo : MonoBehaviour
 {
-    private Transform targetPlayer;
-
-    private float _speedEnemy;
-    private float distance;
-    public Vector3 direction;
+    public static EnemyControllerCorpoACorpo instance;
     
-    public float _RangeMax = 15;
-    private float timer;
-    private float danoParaDar = 0;
-    public bool estaAtacando;
+    private void Awake()
+    {
+        instance = this;
+    }
+    
+    public float moveSpeed = 2.0f;
+    public float attackRange = 1.5f;
 
-    // Start is called before the first frame update
+    private Transform player;
+
+    public GameObject ataque;
+    public bool estaAtacando;
+    private float timeFire = 0;
+
+    private float voltarAandar;
+
     void Start()
     {
-        _speedEnemy = 2;
-        targetPlayer = FindObjectOfType<PlayerController>().transform;
-        //Tiro
-        timer = 1;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        
+        ataque.SetActive(false);
+
+        voltarAandar = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        CalcularDistancia();
-
-        if (distance > _RangeMax)
+        //voltar a andar
+        if (moveSpeed == 0)
         {
-            _speedEnemy = 0;
-        }
-        else
-        {
-            Aproximando();
-        }
-    }
-    void Atacando()
-    {
-        _speedEnemy = 0;
-        timer -= Time.deltaTime;
+            voltarAandar += Time.deltaTime;
             
-        if (timer <= 0)
+            if (voltarAandar >= 2)
+            {
+                moveSpeed = 2;
+                voltarAandar = 0;
+            }
+        }
+        //Tempo entre os ataques
+        if (estaAtacando)
         {
-            estaAtacando = true;
-            VidaPlayer.instance.DanoPlayer(danoParaDar = 2);
-            timer = 2;
+            timeFire += Time.deltaTime;
+            
+            if (timeFire >= 1)
+            {
+                ataque.SetActive(false);
+            }
+            if (timeFire >= 2)
+            {
+                estaAtacando = false;
+            }
+        }
+
+        //ataque e perseguição
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+
+        if (distanceToPlayer <= attackRange)
+        {
+            if (!estaAtacando)
+            {
+                estaAtacando = true;
+                ataque.SetActive(true);
+                timeFire = 0;
+            }
         }
         else
         {
-            estaAtacando = false;
-        }
-    }
-    void Aproximando()
-    {
-        if (!estaAtacando)
-        {
-            _speedEnemy = 2;
-            transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, _speedEnemy * Time.deltaTime);
-        }
-    }
-    void CalcularDistancia()
-    {
-        distance = Vector2.Distance(transform.position, targetPlayer.position);
-        var heading = (transform.position - targetPlayer.position);
-        direction = heading / distance;
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            Atacando();
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            _speedEnemy = 2;
+            transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
         }
     }
 }

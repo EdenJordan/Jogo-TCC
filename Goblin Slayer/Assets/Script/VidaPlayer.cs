@@ -9,20 +9,43 @@ public class VidaPlayer : MonoBehaviour
     
     private Pause _pause;
     
-    private float vidaMaxima;
-    private float vidaAtual;
+    public static int vidaMaxima;
+    public static int vidaAtual;
+
+    public bool escudo;
+    public GameObject escudoObject;
     
     // Start is called before the first frame update
     void Start()
     {
         _pause = GameObject.Find("MenuManager").GetComponent<Pause>();
-        vidaMaxima = 4;
+        vidaMaxima = 10;
         vidaAtual = vidaMaxima;
+        escudo = false;
+        escudoObject.SetActive(false);
     }
 
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Update()
+    {
+        if (escudo)
+        {
+            escudoObject.SetActive(true);
+            PlayerController.instance._Speed = 0;
+            //inserir animação
+        }
+        else
+        {
+            escudoObject.SetActive(false);
+        }
+        if (!escudo && PlayerController.instance.estaCongelado == false)
+        {
+            PlayerController.instance._Speed = 3;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -33,14 +56,17 @@ public class VidaPlayer : MonoBehaviour
         }
     }
 
-    public void DanoPlayer(float danoParaReceber)
+    public void DanoPlayer(int danoParaReceber)
     {
-        vidaAtual -= danoParaReceber;
-
-        if (vidaAtual <= 0)
+        if (!escudo)
         {
-            vidaAtual = 0;
-            _pause.GameOver();
+            vidaAtual -= danoParaReceber;
+
+            if (vidaAtual <= 0)
+            {
+                vidaAtual = 0;
+                _pause.GameOver();
+            }
         }
     }
 }
