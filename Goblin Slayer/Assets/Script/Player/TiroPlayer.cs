@@ -49,25 +49,25 @@ public class TiroPlayer : MonoBehaviour
         }
 
         //Direita
-        if (player.animTiros == 1 && tempoParaAtirar == 3 && _gamaManager.tiroAtual != 1)
+        if (player.animDirecao == 1 && tempoParaAtirar == 3 && _gamaManager.tiroAtual != 1)
         {
             transform.eulerAngles = new Vector3(0, 0, 90);
             rig.velocity = Vector2.right * speed;
         }
         //Esquerda
-        else if (player.animTiros == 2 && tempoParaAtirar == 3 && _gamaManager.tiroAtual != 1)
+        else if (player.animDirecao == 2 && tempoParaAtirar == 3 && _gamaManager.tiroAtual != 1)
         {
             transform.eulerAngles = new Vector3(0, 0, -90);
             rig.velocity = Vector2.left * speed;
         }
         //Cima
-        else if (player.animTiros == 3 && tempoParaAtirar == 3 && _gamaManager.tiroAtual != 1)
+        else if (player.animDirecao == 3 && tempoParaAtirar == 3 && _gamaManager.tiroAtual != 1)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
             rig.velocity = Vector2.up * speed;
         }
         //Baixo
-        else if (player.animTiros == 4 && tempoParaAtirar == 3 && _gamaManager.tiroAtual != 1)
+        else if (player.animDirecao == 4 && tempoParaAtirar == 3 && _gamaManager.tiroAtual != 1)
         {
             transform.eulerAngles = new Vector3(0, 0, 180);
             rig.velocity = Vector2.down * speed;

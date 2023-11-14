@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour
                 }
                 if (tiroAtual == 3) //tirofogo
                 {
-                    tempoDeCadaAtaque = 0.3f; //tava 2
+                    tempoDeCadaAtaque = 0.25f; //tava 2
                     onFire = true;
                     Instantiate(tiroFogo, localDeDisparo, tiroFogo.transform.rotation);
                 }
@@ -190,17 +190,17 @@ public class GameManager : MonoBehaviour
 
     void AtaqueFisico()
     {
-        if (_playerController.animTiros == 1 || _playerController.animTiros == 2)
+        if (_playerController.animDirecao == 1 || _playerController.animDirecao == 2)
         {
             attackDireita.SetActive(true);
         }
 
-        if (_playerController.animTiros == 3)
+        if (_playerController.animDirecao == 3)
         {
             attackCima.SetActive(true);
         }
             
-        if (_playerController.animTiros == 4)
+        if (_playerController.animDirecao == 4)
         {
             attackBaixo.SetActive(true);
         }
