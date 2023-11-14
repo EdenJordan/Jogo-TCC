@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public GameObject slot2;
     public GameObject slot3;
     public GameObject slot4;
+
+    public GameObject fadeOut;
     
     //Vida
     public Text vidaPlayer;
@@ -234,5 +236,10 @@ public class GameManager : MonoBehaviour
             slot3.SetActive(false); //pergaminho1
             slot4.SetActive(true); //pergaminho2
         }
+    }
+
+    public void FadeSetActive(bool valor)
+    {
+        fadeOut.SetActive(valor);
     }
 }

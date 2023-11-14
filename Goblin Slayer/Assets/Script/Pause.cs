@@ -10,6 +10,8 @@ public class Pause : MonoBehaviour
     public GameObject painelPause;
     public GameObject painelGameOver;
     public GameObject painelEscolherPergaminho;
+    public GameObject painelPergaminhoFogo;
+    public GameObject painelPergaminhoGelo;
 
     private bool isGameOver;
 
@@ -91,5 +93,14 @@ public class Pause : MonoBehaviour
     public void FecharSelecaoDePergaminhos()
     {
         painelEscolherPergaminho.SetActive(false);
+    }
+    
+    public void PergaminhoDeFogo()
+    {
+        painelEscolherPergaminho.SetActive(false);
+    }
+    public void PergaminhoDeGelo()
+    {
+        painelEscolherPergaminho.SetActive  (false);
     }
 }

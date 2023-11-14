@@ -8,10 +8,10 @@ public class MudancaDeFases : MonoBehaviour
 {
     private GameObject player;
     private GameObject localDeNascenca;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
+        GameManager.instance.FadeSetActive(true);
         player = GameObject.FindWithTag("Player");
         localDeNascenca = GameObject.FindWithTag("LocalDeNascenca");
         player.transform.position = localDeNascenca.transform.position;
@@ -25,8 +25,9 @@ public class MudancaDeFases : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("ZonaDeDano"))
         {
+            GameManager.instance.FadeSetActive(false);
             if (GameManager.instance.fases == 1)
             {
                 SceneManager.LoadScene("Fase2");
