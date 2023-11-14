@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         EscolherTiro();
         HudMenu();
 
-        vidaPlayer.text = "❤ x " + VidaPlayer.vidaAtual;
+        vidaPlayer.text = " x " + VidaPlayer.vidaAtual;
     }
 
     void ProcurarObjetos()
