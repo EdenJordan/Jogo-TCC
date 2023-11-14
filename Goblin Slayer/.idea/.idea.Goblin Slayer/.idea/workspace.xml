@@ -7,12 +7,40 @@
     <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase5.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase5.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FaseBoss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FaseBoss.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MaquinaDeEstado.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MaquinaDeEstado.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Puzzle2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Puzzle2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Puzzle3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Puzzle3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Puzzle4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Puzzle4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Boss.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Boss.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/DanoEnemyCaC.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/DanoEnemyCaC.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/EnemyControllerArqueiro.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/EnemyControllerArqueiro.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/EnemyControllerCorpoACorpo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/EnemyControllerCorpoACorpo.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Pause.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Pause.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Puzzles.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TiroEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TiroEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/VidaPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/VidaPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/TiroEnemy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/TiroEnemy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/TiroPlayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/TiroPlayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/VidaEnemy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/VidaEnemy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/VidaPlayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/VidaPlayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Player/player movimentação/playeranimacaobaixo-Sheet-export.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Player/player movimentação/playeranimacaobaixo-Sheet-export.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +158,7 @@
       <workItem from="1699745073280" duration="3100000" />
       <workItem from="1699818320183" duration="7574000" />
       <workItem from="1699873450778" duration="6898000" />
+      <workItem from="1699914405248" duration="5716000" />
     </task>
     <servers />
   </component>

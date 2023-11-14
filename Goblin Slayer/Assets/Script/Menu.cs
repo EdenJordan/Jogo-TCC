@@ -8,16 +8,16 @@ public class Menu : MonoBehaviour
 { 
     public void MenuPrincipal()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
     }
     public void Jogar()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Fase1");
     }
     public void Creditos()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Creditos");
     }
     public void Sair()
     {

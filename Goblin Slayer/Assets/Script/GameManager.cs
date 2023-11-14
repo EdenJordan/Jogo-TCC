@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     //Outras coisas
     private PlayerController _playerController;
     public static GameManager instance;
+    public int fases;
 
     private void Awake()
     {
@@ -53,6 +54,8 @@ public class GameManager : MonoBehaviour
         onFireFisico = false;
         tiroAtual = 1;
         ProcurarObjetos();
+
+        fases = 1;
         
         //hud
         slot1.SetActive(true); //espada

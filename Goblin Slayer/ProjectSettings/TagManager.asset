@@ -12,6 +12,7 @@ TagManager:
   - Caixa
   - Boss
   - Enemy2
+  - LocalDeNascenca
   layers:
   - Default
   - TransparentFX
