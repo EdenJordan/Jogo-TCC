@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour
                 }
                 if (tiroAtual == 3) //tirofogo
                 {
-                    tempoDeCadaAtaque = 2;
+                    tempoDeCadaAtaque = 0.3f; //tava 2
                     onFire = true;
                     Instantiate(tiroFogo, localDeDisparo, tiroFogo.transform.rotation);
                 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -10,6 +11,10 @@ public class PlayerController : MonoBehaviour
     private GameManager _gameManager;
     private GameObject player;
     private Animator anim;
+
+    private float _H;
+    
+    private float _V;
     
     public float _Speed;
     public int animTiros;
@@ -47,17 +52,80 @@ public class PlayerController : MonoBehaviour
         }
         //============
         Move();
+
+        if (_gameManager.onFire)
+        {
+            _Speed = 0;
+        }
+        else
+        {
+            _Speed = 3;
+        }
+        
+        if (_H > 0) //Direita
+        {
+            transform.eulerAngles = new Vector2(0, 0);
+            if (_gameManager.tiroAtual == 3)
+            {
+                if (_gameManager.onFire)
+                {
+                    anim.SetInteger("Transicao", 1);
+                }
+                else
+                {
+                    anim.SetInteger("Transicao", 1);
+                }
+            }
+        }
+        if (_H < 0) //Esquerda
+        {
+            transform.eulerAngles = new Vector2(0, 180);
+            if (_H == 0 && _V == 0)
+            {
+                if (_gameManager.tiroAtual == 3)
+                {
+                    anim.SetInteger("Transicao", 1);
+                }
+            }
+        }
+        
+        if (_V > 0) //Cima
+        {
+            transform.eulerAngles = new Vector2(0, 0);
+            if (_H == 0 && _V == 0)
+            {
+                if (_gameManager.tiroAtual == 3)
+                {
+                    anim.SetInteger("Transicao", 2);
+                }
+            }
+        }
+        if (_V < 0) //Baixo
+        {
+            transform.eulerAngles = new Vector2(0, 180);
+            if (_H == 0 && _V == 0)
+            {
+                if (_gameManager.tiroAtual == 3)
+                {
+                    anim.SetInteger("Transicao", 3);
+                }
+            }
+        }
+        
+
     }
 
     void Move()
     {
-        float _H = Input.GetAxisRaw("Horizontal");
-        float _V = Input.GetAxisRaw("Vertical");
+        _H = Input.GetAxisRaw("Horizontal");
+        _V = Input.GetAxisRaw("Vertical");
 
         Vector2 _Moviment = new Vector2(_H, _V).normalized * _Speed;
         //transform.Translate(_Moviment*Time.deltaTime);
         GetComponent<Rigidbody2D>().velocity = _Moviment;
 
+          
+        
         if (VidaPlayer.instance.escudo == false)
         {
             if (_H > 0 && !_gameManager.onFireFisico)
@@ -89,5 +157,44 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("Direita", false);
             }
         }
+
+        if (_gameManager.onFireFisico || _gameManager.onFire)
+        {
+            switch (_gameManager.tiroAtual)
+            {
+                case 1:
+                    anim.SetFloat("Blend",2); // 2 é atacando.
+                    break;
+                /*case 3:
+                    anim.SetFloat("Blend", 3);
+                    break;
+                case 4:
+                    anim.SetFloat("Blend", 3);
+                    break;
+                case 5:
+                    anim.SetFloat("Blend", 3);
+                    break;*/
+                default:
+                    break;
+            }
+            
+        }
+        else
+        {
+            if (GetComponent<Rigidbody2D>().velocity == Vector2.zero)
+            {
+                anim.SetFloat("Blend",0); //0 é idle
+            }
+            else
+            {
+                anim.SetFloat("Blend",1); // 1é andando.
+            }
+        }
+        
+    }
+
+    public void Idle()
+    {
+        
     }
 }
