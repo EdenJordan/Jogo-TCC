@@ -25,6 +25,7 @@ public class Puzzle1e2 : MonoBehaviour
 
         if (GameManager.instance.fases == 3)
         {
+            Animator.SetBool("PilarDesativando", false);
             passagem.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1);
         }
     }
@@ -46,7 +47,7 @@ public class Puzzle1e2 : MonoBehaviour
 
                 if (GameManager.instance.fases == 3)
                 {
-                    passagem.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1);
+                    Animator.SetBool("PilarDesativando", false);
                     passagem.GetComponent<BoxCollider2D>().enabled = true;
                 }
             }
@@ -66,7 +67,7 @@ public class Puzzle1e2 : MonoBehaviour
             }
             if (GameManager.instance.fases == 3)
             {
-                passagem.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0);
+                Animator.SetBool("PilarDesativando", true);
                 passagem.GetComponent<BoxCollider2D>().enabled = false;
             }
         }

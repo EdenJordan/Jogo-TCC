@@ -33,40 +33,42 @@ public class Puzzle3olhos : MonoBehaviour
     {
         if (animOlho1 && animOlho2 && animOlho3)
         {
-            pilar.SetActive(false);
+            pilar.GetComponent<BoxCollider2D>().enabled = false;
+            pilar.GetComponent<Animator>().SetBool("PilarDesativando", true);
         }
         else
         {
-            pilar.SetActive(true);
+            pilar.GetComponent<BoxCollider2D>().enabled = true;
+            pilar.GetComponent<Animator>().SetBool("PilarDesativando", false);
         }
         //=============================================================================
         if (animOlho1)
         {
-            olho1.GetComponent<Animator>().SetBool("nomeDaAnimacao",true);
+            olho1.GetComponent<Animator>().SetBool("OlhoAberto",true);
         }
         else
         {
-            olho1.GetComponent<Animator>().SetBool("nomeDaAnimacao",false);
+            olho1.GetComponent<Animator>().SetBool("OlhoAberto",false);
         }
         
         //==============================================================================
         if (animOlho2)
         {
-            olho2.GetComponent<Animator>().SetBool("nomeDaAnimacao",true);
+            olho2.GetComponent<Animator>().SetBool("OlhoAberto",true);
         }
         else
         {
-            olho2.GetComponent<Animator>().SetBool("nomeDaAnimacao",false);
+            olho2.GetComponent<Animator>().SetBool("OlhoAberto",false);
         }
         
         //===============================================================================
         if (animOlho3)
         {
-            olho3.GetComponent<Animator>().SetBool("nomeDaAnimacao",true);
+            olho3.GetComponent<Animator>().SetBool("OlhoAberto",true);
         }
         else
         {
-            olho3.GetComponent<Animator>().SetBool("nomeDaAnimacao",false);
+            olho3.GetComponent<Animator>().SetBool("OlhoAberto",false);
         }
     }
 }
