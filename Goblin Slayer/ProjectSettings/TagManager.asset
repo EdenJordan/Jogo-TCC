@@ -15,6 +15,7 @@ TagManager:
   - LocalDeNascenca
   - Parede
   - Alavanca
+  - LocalCaixa
   layers:
   - Default
   - TransparentFX

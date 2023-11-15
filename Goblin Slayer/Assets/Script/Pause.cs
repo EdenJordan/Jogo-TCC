@@ -103,11 +103,11 @@ public class Pause : MonoBehaviour
         painelEscolherPergaminho.SetActive(false);
     }
     
-    public void PergaminhoDeFogo()
+    public void FecharPainelPergaminhoDeFogo()
     {
         painelPergaminhoFogo.SetActive(false);
     }
-    public void PergaminhoDeGelo()
+    public void FecharPainelPergaminhoDeGelo()
     {
         painelPergaminhoGelo.SetActive(false);
     }

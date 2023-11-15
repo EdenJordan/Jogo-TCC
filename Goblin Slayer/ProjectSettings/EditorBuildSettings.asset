@@ -12,30 +12,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Fase1.unity
     guid: 5c77115131fb45f42845ead4c0a523c7
   - enabled: 1
-    path: Assets/Scenes/Creditos.unity
-    guid: 18d93eb67135c254b9eea63886d1d204
-  - enabled: 1
     path: Assets/Scenes/Fase2.unity
     guid: ae66473358956604fa3c848ae9eec30e
-  - enabled: 1
-    path: Assets/Scenes/Fase3.unity
-    guid: 9a249daa052e6b3479899bb644cdd244
-  - enabled: 1
-    path: Assets/Scenes/Fase4.unity
-    guid: fc2727a9597dcf149b59801683681cf2
-  - enabled: 1
-    path: Assets/Scenes/Fase4.unity
-    guid: 5dcac87508836394289265a32f02cdff
-  - enabled: 1
-    path: Assets/Scenes/FaseBoss.unity
-    guid: 096e458c090aaab44b2f71d9123edee9
   - enabled: 1
     path: Assets/Scenes/Puzzle2.unity
     guid: 1bc32991491108e43ba219f20e90fbb2
   - enabled: 1
+    path: Assets/Scenes/Fase3.unity
+    guid: 9a249daa052e6b3479899bb644cdd244
+  - enabled: 1
     path: Assets/Scenes/Puzzle3.unity
     guid: 8eff9b83f8af3d141a4342607dac1a39
   - enabled: 1
+    path: Assets/Scenes/Fase4.unity
+    guid: 5dcac87508836394289265a32f02cdff
+  - enabled: 1
     path: Assets/Scenes/Puzzle4.unity
     guid: d8a4cb6ba52f51242a8b609a2808b882
+  - enabled: 1
+    path: Assets/Scenes/FaseBoss.unity
+    guid: 096e458c090aaab44b2f71d9123edee9
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 18d93eb67135c254b9eea63886d1d204
   m_configObjects: {}

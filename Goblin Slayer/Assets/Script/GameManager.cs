@@ -172,7 +172,7 @@ public class GameManager : MonoBehaviour
             {
                 tiroAtual = 3; //tirofogo
             }
-            if (pergaminhoRaio)
+            else if (pergaminhoRaio)
             {
                 tiroAtual = 5; //tiroraio
             }
@@ -183,7 +183,7 @@ public class GameManager : MonoBehaviour
             {
                 tiroAtual = 4; //tirogelo
             }
-            if (pergaminhoRaio)
+            else if (pergaminhoRaio)
             {
                 tiroAtual = 5; //tiroraio
             }
