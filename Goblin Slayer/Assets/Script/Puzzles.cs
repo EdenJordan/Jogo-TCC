@@ -8,13 +8,15 @@ public class Puzzles : MonoBehaviour
     public GameObject ponte;
     private float timer;
     public int quantidadeDeObjetos;
+    private Animator animponte;
 
     // Start is called before the first frame update
     void Start()
     {
+        animponte = ponte.GetComponent<Animator>();
+        animponte.SetBool("PonteEmergindo", false);
         quantidadeDeObjetos = 0;
         timer = 1;
-        ponte.GetComponent<SpriteRenderer>().color = new Color(0.4056604f, 0.4056604f, 0.4056604f, 0);
     }
 
     // Update is called once per frame
@@ -26,8 +28,8 @@ public class Puzzles : MonoBehaviour
             
             if (timer <= 0)
             {
-                ponte.GetComponent<SpriteRenderer>().color = new Color(0.4056604f, 0.4056604f, 0.4056604f, 0);
                 ponte.GetComponent<BoxCollider2D>().enabled = true;
+                animponte.SetBool("PonteEmergindo", false);
             }
         }
     }
@@ -38,7 +40,7 @@ public class Puzzles : MonoBehaviour
         {
             timer = 1;
             quantidadeDeObjetos++;
-            ponte.GetComponent<SpriteRenderer>().color = new Color(0.4056604f, 0.4056604f, 0.4056604f, 1);
+            animponte.SetBool("PonteEmergindo", true);
             ponte.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
