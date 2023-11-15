@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
             {
                 if (tiroAtual == 2)
                 {
-                    tempoDeCadaAtaque = 3;
+                    tempoDeCadaAtaque = 0.5f; //tava 3
                     VidaPlayer.instance.escudo = true;
                 }
                 

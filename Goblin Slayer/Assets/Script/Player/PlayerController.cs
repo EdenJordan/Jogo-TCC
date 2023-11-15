@@ -77,6 +77,42 @@ public class PlayerController : MonoBehaviour
 
     public void Animacoes()
     {
+        //Escudo ==========================================
+        if (animDirecao == 1 || animDirecao == 2) //Direita
+        {
+            if (_gameManager.tiroAtual == 2 && VidaPlayer.instance.escudo == true)
+            {
+                anim.SetInteger("Transicao", 10);
+            }
+            else
+            {
+                anim.SetInteger("Transicao", 0);
+            }
+        }
+        
+        if (animDirecao == 3) //cima
+        {
+            if (_gameManager.tiroAtual == 2 && VidaPlayer.instance.escudo == true)
+            {
+                anim.SetInteger("Transicao", 11);
+            }
+            else
+            {
+                anim.SetInteger("Transicao", 0);
+            }
+        }
+        
+        if (animDirecao == 4) //Baixo
+        {
+            if (_gameManager.tiroAtual == 2 && VidaPlayer.instance.escudo == true)
+            {
+                anim.SetInteger("Transicao", 12);
+            }
+            else
+            {
+                anim.SetInteger("Transicao", 0);
+            }
+        }
         //Ataque fogo ==========================================
         if (animDirecao == 1 || animDirecao == 2) //Direita
         {
@@ -122,7 +158,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        
+
         //Ataque gelo ==========================================
         if (animDirecao == 1 || animDirecao == 2) //Direita
         {
