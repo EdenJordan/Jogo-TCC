@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4752263723573966715}
   - component: {fileID: 4752263723573966716}
   - component: {fileID: -8406079792775239159}
+  - component: {fileID: -7945752800732598174}
   m_Layer: 0
   m_Name: tiroRaio
   m_TagString: TiroPlayer
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.6971314, g: 0.0990566, b: 1, a: 1}
+  m_Sprite: {fileID: -1632628242, guid: 822a7ea640853e44c9ab8d1292679203, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -121,8 +122,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.0000002, y: 2.0000005}
+  m_Offset: {x: 3.6026577e-15, y: -0.109618425}
+  m_Size: {x: 0.4738269, y: 0.9476539}
   m_Direction: 0
 --- !u!114 &-8406079792775239159
 MonoBehaviour:
@@ -139,3 +140,23 @@ MonoBehaviour:
   tiroFogo: 0
   tiroGelo: 0
   tiroRaio: 1
+--- !u!95 &-7945752800732598174
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4752263723573966718}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e6ea0b737d045db4d96490ce20b2a2b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

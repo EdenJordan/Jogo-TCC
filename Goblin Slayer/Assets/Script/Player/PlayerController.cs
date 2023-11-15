@@ -123,6 +123,98 @@ public class PlayerController : MonoBehaviour
             }
         }
         
+        //Ataque gelo ==========================================
+        if (animDirecao == 1 || animDirecao == 2) //Direita
+        {
+            if (_gameManager.tiroAtual == 4)
+            {
+                if (_gameManager.onFire)
+                {
+                    anim.SetInteger("Transicao", 4);
+                }
+                else
+                {
+                    anim.SetInteger("Transicao", 0);
+                }
+            }
+        }
+        
+        if (animDirecao == 3) //cima
+        {
+            if (_gameManager.tiroAtual == 4)
+            {
+                if (_gameManager.onFire)
+                {
+                    anim.SetInteger("Transicao", 5);
+                }
+                else
+                {
+                    anim.SetInteger("Transicao", 0);
+                }
+            }
+        }
+        
+        if (animDirecao == 4) //Baixo
+        {
+            if (_gameManager.tiroAtual == 4)
+            {
+                if (_gameManager.onFire)
+                {
+                    anim.SetInteger("Transicao", 6);
+                }
+                else
+                {
+                    anim.SetInteger("Transicao", 0);
+                }
+            }
+        }
+        
+        //Ataque raio ==========================================
+        if (animDirecao == 1 || animDirecao == 2) //Direita
+        {
+            if (_gameManager.tiroAtual == 5)
+            {
+                if (_gameManager.onFire)
+                {
+                    anim.SetInteger("Transicao", 9);
+                }
+                else
+                {
+                    anim.SetInteger("Transicao", 0);
+                }
+            }
+        }
+        
+        if (animDirecao == 3) //cima
+        {
+            if (_gameManager.tiroAtual == 5)
+            {
+                if (_gameManager.onFire)
+                {
+                    anim.SetInteger("Transicao", 8);
+                }
+                else
+                {
+                    anim.SetInteger("Transicao", 0);
+                }
+            }
+        }
+        
+        if (animDirecao == 4) //Baixo
+        {
+            if (_gameManager.tiroAtual == 5)
+            {
+                if (_gameManager.onFire)
+                {
+                    anim.SetInteger("Transicao", 7);
+                }
+                else
+                {
+                    anim.SetInteger("Transicao", 0);
+                }
+            }
+        }
+        
         //Ataque Espada ==========================================
         if (VidaPlayer.instance.escudo == false)
         {
