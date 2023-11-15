@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Puzzle2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Puzzle2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Puzzle3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Puzzle3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzle1e2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Puzzle1e2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzle3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Puzzle3.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzle3olhos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Puzzle3olhos.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Ani/AniPlayer/EscudoDown.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Ani/AniPlayer/EscudoDown.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Ani/AniPlayer/EscudoRight.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Ani/AniPlayer/EscudoRight.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Ani/AniPlayer/EscudoUp.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Ani/AniPlayer/EscudoUp.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Animators/playeranimacoes.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Animators/playeranimacoes.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Transition/FadeOut.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Transition/FadeOut.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +21,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/Puzzle4.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/ResetarCaixa.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -139,7 +142,7 @@
       <workItem from="1700065342782" duration="2885000" />
       <workItem from="1700071451285" duration="461000" />
       <workItem from="1700075344004" duration="1789000" />
-      <workItem from="1700078534058" duration="1069000" />
+      <workItem from="1700078534058" duration="3890000" />
     </task>
     <servers />
   </component>
