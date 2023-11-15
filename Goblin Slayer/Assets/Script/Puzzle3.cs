@@ -8,6 +8,7 @@ public class Puzzle3 : MonoBehaviour
     public bool alavanca1;
     public bool alavanca2;
     public bool alavanca3;
+    public Animator Animator;
 
     // Start is called before the first frame update
     void Start()

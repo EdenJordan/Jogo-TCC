@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 36052704}
   - component: {fileID: 36052703}
   - component: {fileID: 36052702}
+  - component: {fileID: 36052705}
   m_Layer: 0
   m_Name: pilarativo
   m_TagString: Untagged
@@ -234,6 +235,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &36052705
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36052701}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cd5cf2a46cccf69468dd9ac791839bdc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &51944637
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,6 +266,7 @@ GameObject:
   - component: {fileID: 51944639}
   - component: {fileID: 51944638}
   - component: {fileID: 51944640}
+  - component: {fileID: 51944641}
   m_Layer: 0
   m_Name: Olho2
   m_TagString: Untagged
@@ -345,6 +367,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.78125, y: 0.9305496}
   m_EdgeRadius: 0
+--- !u!95 &51944641
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51944637}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4664cca26e2726440a85f556eae839ee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &66766500
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +429,7 @@ GameObject:
   - component: {fileID: 138854120}
   - component: {fileID: 138854119}
   - component: {fileID: 138854121}
+  - component: {fileID: 138854122}
   m_Layer: 0
   m_Name: Olho1
   m_TagString: Untagged
@@ -487,6 +530,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.78125, y: 0.9918246}
   m_EdgeRadius: 0
+--- !u!95 &138854122
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138854118}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b60bc276970904a4196818b9272ddde6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &409502964
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   olho1: {fileID: 138854118}
   olho2: {fileID: 51944637}
-  olho3: {fileID: 563151811}
+  olho3: {fileID: 1595071331}
   animOlho1: 0
   animOlho2: 1
   animOlho3: 0
@@ -1913,6 +1976,7 @@ MonoBehaviour:
   alavanca1: 0
   alavanca2: 0
   alavanca3: 1
+  Animator: {fileID: 0}
 --- !u!1 &647237597
 GameObject:
   m_ObjectHideFlags: 0
@@ -3509,6 +3573,7 @@ MonoBehaviour:
   alavanca1: 1
   alavanca2: 0
   alavanca3: 0
+  Animator: {fileID: 0}
 --- !u!1 &1595071331
 GameObject:
   m_ObjectHideFlags: 0
@@ -3520,6 +3585,7 @@ GameObject:
   - component: {fileID: 1595071333}
   - component: {fileID: 1595071332}
   - component: {fileID: 1595071334}
+  - component: {fileID: 1595071335}
   m_Layer: 0
   m_Name: Olho3
   m_TagString: Untagged
@@ -3620,6 +3686,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.78125, y: 0.9305496}
   m_EdgeRadius: 0
+--- !u!95 &1595071335
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595071331}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9ded360a4b5dab542aa32a6f28c6a4c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1789584638
 GameObject:
   m_ObjectHideFlags: 0
@@ -4319,3 +4405,4 @@ MonoBehaviour:
   alavanca1: 0
   alavanca2: 1
   alavanca3: 0
+  Animator: {fileID: 0}
