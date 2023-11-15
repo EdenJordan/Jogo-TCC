@@ -6,16 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Puzzle2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Puzzle2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FaseBoss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FaseBoss.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Puzzle3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Puzzle3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Puzzle4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Puzzle4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzles.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzles.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +134,7 @@
       <workItem from="1700055106404" duration="3005000" />
       <workItem from="1700064475600" duration="504000" />
       <workItem from="1700065342782" duration="2885000" />
+      <workItem from="1700071447944" duration="379000" />
     </task>
     <servers />
   </component>

@@ -519,9 +519,9 @@ MonoBehaviour:
   olho1: {fileID: 138854118}
   olho2: {fileID: 51944637}
   olho3: {fileID: 563151811}
-  animOlho1: 1
-  animOlho2: 0
-  animOlho3: 1
+  animOlho1: 0
+  animOlho2: 1
+  animOlho3: 0
   pilar: {fileID: 36052701}
 --- !u!4 &409502966
 Transform:
