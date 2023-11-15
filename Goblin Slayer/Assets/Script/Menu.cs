@@ -27,8 +27,7 @@ public class Menu : MonoBehaviour
     public void Jogar()
     {
         Time.timeScale = 1;
-        
-        SceneManager.LoadScene("Fase1");
+        SceneManager.LoadScene("CutsCenesIniciais");
     }
     public void Creditos()
     {
