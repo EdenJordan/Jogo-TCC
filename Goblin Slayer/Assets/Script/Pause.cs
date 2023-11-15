@@ -15,6 +15,13 @@ public class Pause : MonoBehaviour
 
     private bool isGameOver;
 
+    public static Pause instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
         isGameOver = false;
@@ -39,13 +46,23 @@ public class Pause : MonoBehaviour
             }
         }
 
-        if (painelEscolherPergaminho.activeSelf || painelGameOver.activeSelf)
+        if (painelEscolherPergaminho.activeSelf || painelGameOver.activeSelf || painelPergaminhoFogo.activeSelf || painelPergaminhoGelo.activeSelf)
         {
             Time.timeScale = 0;
         }
         else
         {
             Time.timeScale = 1;
+        }
+
+        if (painelPergaminhoFogo.activeSelf)
+        {
+            GameManager.instance.pergaminhoFogo = true;
+        }
+
+        if (painelPergaminhoGelo.activeSelf)
+        {
+            GameManager.instance.pergaminhoGelo = true;
         }
         
     }
@@ -65,15 +82,6 @@ public class Pause : MonoBehaviour
         Time.timeScale = 0;
         isGameOver = true;
         painelGameOver.SetActive(true);
-    }
-
-    public void ReiniciarCena()
-    {
-        // Obtém o índice da cena atual
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-        // Carrega a cena atual novamente
-        SceneManager.LoadScene(currentSceneIndex);
     }
 
     public void SubstituirPergaminhoFogo()
@@ -97,10 +105,10 @@ public class Pause : MonoBehaviour
     
     public void PergaminhoDeFogo()
     {
-        painelEscolherPergaminho.SetActive(false);
+        painelPergaminhoFogo.SetActive(false);
     }
     public void PergaminhoDeGelo()
     {
-        painelEscolherPergaminho.SetActive  (false);
+        painelPergaminhoGelo.SetActive(false);
     }
 }

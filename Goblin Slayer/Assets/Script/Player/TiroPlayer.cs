@@ -157,5 +157,10 @@ public class TiroPlayer : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
+        if (col.gameObject.CompareTag("Parede"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

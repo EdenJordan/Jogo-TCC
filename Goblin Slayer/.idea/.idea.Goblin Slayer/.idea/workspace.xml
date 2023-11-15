@@ -6,11 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Animators/playeranimacoes.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Animators/playeranimacoes.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tiros/Enemy/Flecha.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tiros/Enemy/Flecha.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FaseBoss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FaseBoss.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Puzzle2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Puzzle2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Puzzle3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Puzzle3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Puzzle4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Puzzle4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Bau.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Bau.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Pause.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Pause.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Player/TiroPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/TiroPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +142,7 @@
       <workItem from="1699873450778" duration="6898000" />
       <workItem from="1699914405248" duration="5716000" />
       <workItem from="1699980791806" duration="3841000" />
-      <workItem from="1699999988766" duration="3638000" />
+      <workItem from="1699999988766" duration="9183000" />
     </task>
     <servers />
   </component>
