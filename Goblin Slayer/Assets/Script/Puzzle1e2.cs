@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Puzzle1e2 : MonoBehaviour
@@ -8,14 +9,17 @@ public class Puzzle1e2 : MonoBehaviour
     public GameObject passagem;
     private float timer;
     public int quantidadeDeObjetos;
+    public Animator Animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        Animator = passagem.GetComponent<Animator>();
         quantidadeDeObjetos = 0;
         timer = 1;
         if (GameManager.instance.fases == 1)
         {
+            Animator.SetBool("PonteEmergindo", false);
             passagem.GetComponent<SpriteRenderer>().color = new Color(0.4056604f, 0.4056604f, 0.4056604f, 0);
         }
 
@@ -36,7 +40,7 @@ public class Puzzle1e2 : MonoBehaviour
             {
                 if (GameManager.instance.fases == 1)
                 {
-                    passagem.GetComponent<SpriteRenderer>().color = new Color(0.4056604f, 0.4056604f, 0.4056604f, 0);
+                    Animator.SetBool("PonteEmergindo", false);
                     passagem.GetComponent<BoxCollider2D>().enabled = true;
                 }
 
@@ -57,7 +61,7 @@ public class Puzzle1e2 : MonoBehaviour
             quantidadeDeObjetos++;
             if (GameManager.instance.fases == 1)
             {
-                passagem.GetComponent<SpriteRenderer>().color = new Color(0.4056604f, 0.4056604f, 0.4056604f, 1);
+                Animator.SetBool("PonteEmergindo", true);
                 passagem.GetComponent<BoxCollider2D>().enabled = false;
             }
             if (GameManager.instance.fases == 3)
