@@ -63,13 +63,13 @@ public class TiroPlayer : MonoBehaviour
         //Cima
         else if (player.animDirecao == 3 && tempoParaAtirar == 3 && _gamaManager.tiroAtual != 1)
         {
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            transform.eulerAngles = new Vector3(0, 0, 180);
             rig.velocity = Vector2.up * speed;
         }
         //Baixo
         else if (player.animDirecao == 4 && tempoParaAtirar == 3 && _gamaManager.tiroAtual != 1)
         {
-            transform.eulerAngles = new Vector3(0, 0, 180);
+            transform.eulerAngles = new Vector3(0, 0, 0);
             rig.velocity = Vector2.down * speed;
         }
         

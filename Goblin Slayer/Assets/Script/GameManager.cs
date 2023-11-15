@@ -107,22 +107,24 @@ public class GameManager : MonoBehaviour
                     tempoDeCadaAtaque = 3;
                     VidaPlayer.instance.escudo = true;
                 }
+                
+                
                 if (tiroAtual == 3) //tirofogo
                 {
-                    tempoDeCadaAtaque = 0.25f; //tava 2
+                    tempoDeCadaAtaque = 0.45f; //tava 2
                     onFire = true;
                     Instantiate(tiroFogo, localDeDisparo, tiroFogo.transform.rotation);
                 }
                 if (tiroAtual == 4)//tirogelo
                 {
-                    tempoDeCadaAtaque = 2;
+                    tempoDeCadaAtaque = 0.45f; //tava 2
                     onFire = true;
                     Instantiate(tiroGelo, localDeDisparo, tiroGelo.transform.rotation);
                 }
 
                 if (tiroAtual == 5) //tiroraio
                 {
-                    tempoDeCadaAtaque = 2;
+                    tempoDeCadaAtaque = 0.45f; //tava 2
                     onFire = true;
                     Instantiate(tiroRaio, localDeDisparo, tiroRaio.transform.rotation);
                 }
