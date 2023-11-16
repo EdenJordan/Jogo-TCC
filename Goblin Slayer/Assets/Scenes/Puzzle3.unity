@@ -582,9 +582,9 @@ MonoBehaviour:
   olho1: {fileID: 138854118}
   olho2: {fileID: 51944637}
   olho3: {fileID: 1595071331}
-  animOlho1: 0
-  animOlho2: 1
-  animOlho3: 0
+  animOlho1: 1
+  animOlho2: 0
+  animOlho3: 1
   pilar: {fileID: 36052701}
 --- !u!4 &409502966
 Transform:
@@ -1977,6 +1977,7 @@ MonoBehaviour:
   alavanca2: 0
   alavanca3: 1
   Animator: {fileID: 0}
+  colisao: 0
 --- !u!1 &647237597
 GameObject:
   m_ObjectHideFlags: 0
@@ -3574,6 +3575,7 @@ MonoBehaviour:
   alavanca2: 0
   alavanca3: 0
   Animator: {fileID: 0}
+  colisao: 0
 --- !u!1 &1595071331
 GameObject:
   m_ObjectHideFlags: 0
@@ -4406,3 +4408,4 @@ MonoBehaviour:
   alavanca2: 1
   alavanca3: 0
   Animator: {fileID: 0}
+  colisao: 0

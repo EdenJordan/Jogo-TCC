@@ -81,6 +81,7 @@ public class EnemyControllerCorpoACorpo : MonoBehaviour
             {
                 if (!estaAtacando)
                 {
+                    Audio.instance.espada.Play();
                     estaAtacando = true;
                     ataque.SetActive(true);
                     timeFire = 0;
@@ -89,6 +90,17 @@ public class EnemyControllerCorpoACorpo : MonoBehaviour
             else
             {
                 transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+            }
+        }
+    }
+    public void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("TiroPlayer"))
+        {
+            if (TiroPlayer.instance.tiroGelo)
+            {
+                estaCongelado = true;
+                moveSpeed = 0;
             }
         }
     }

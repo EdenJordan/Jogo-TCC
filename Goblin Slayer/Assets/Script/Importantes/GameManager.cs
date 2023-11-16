@@ -52,6 +52,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Audio.instance.caverna.Stop();
+        Audio.instance.menu.Stop();
+        Audio.instance.floresta.Play();
         onFire = false;
         onFireFisico = false;
         tiroAtual = 1;
@@ -91,6 +94,7 @@ public class GameManager : MonoBehaviour
             {
                 if (tiroAtual == 1) //espada
                 {
+                    Audio.instance.espada.Play();
                     tempoDeCadaAtaque = 0.3f;
                     onFireFisico = true;
                     AtaqueFisico();
@@ -104,19 +108,21 @@ public class GameManager : MonoBehaviour
             {
                 if (tiroAtual == 2) //escudo
                 {
+                    Audio.instance.escudo.Play();
                     tempoDeCadaAtaque = 0.5f; //tava 3
                     VidaPlayer.instance.escudo = true;
                 }
-                
-                
+
                 if (tiroAtual == 3) //tirofogo
                 {
+                    Audio.instance.fogo.Play();
                     tempoDeCadaAtaque = 0.45f; //tava 2
                     onFire = true;
                     Instantiate(tiroFogo, localDeDisparo, tiroFogo.transform.rotation);
                 }
                 if (tiroAtual == 4)//tirogelo
                 {
+                    Audio.instance.gelo.Play();
                     tempoDeCadaAtaque = 0.45f; //tava 2
                     onFire = true;
                     Instantiate(tiroGelo, localDeDisparo, tiroGelo.transform.rotation);
@@ -124,6 +130,7 @@ public class GameManager : MonoBehaviour
 
                 if (tiroAtual == 5) //tiroraio
                 {
+                    Audio.instance.raio.Play();
                     tempoDeCadaAtaque = 0.45f; //tava 2
                     onFire = true;
                     Instantiate(tiroRaio, localDeDisparo, tiroRaio.transform.rotation);
@@ -133,7 +140,6 @@ public class GameManager : MonoBehaviour
             {
                 if (tiroAtual == 2)
                 {
-                    tempoDeCadaAtaque = 3;
                     VidaPlayer.instance.escudo = false;
                 }
             }
@@ -212,6 +218,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            Audio.instance.selecaoMenu.Play();
             slot1.SetActive(true); //espada
             slot2.SetActive(false); //escudo
             slot3.SetActive(false); //pergaminho1
@@ -219,6 +226,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            Audio.instance.selecaoMenu.Play();
             slot1.SetActive(false); //espada
             slot2.SetActive(true); //escudo
             slot3.SetActive(false); //pergaminho1
@@ -226,6 +234,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            Audio.instance.selecaoMenu.Play();
             slot1.SetActive(false); //espada
             slot2.SetActive(false); //escudo
             slot3.SetActive(true); //pergaminho1
@@ -233,6 +242,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            Audio.instance.selecaoMenu.Play();
             slot1.SetActive(false); //espada
             slot2.SetActive(false); //escudo
             slot3.SetActive(false); //pergaminho1

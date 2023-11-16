@@ -20,21 +20,30 @@ public class Menu : MonoBehaviour
     {
         if (_DontDestroy != null)
         {
+            Audio.instance.floresta.Stop();
+            Audio.instance.caverna.Stop();
             Destroy(_DontDestroy.gameObject);
         }
+        Audio.instance.floresta.Stop();
+        Audio.instance.caverna.Stop();
+        Audio.instance.menu.Play();
+        Audio.instance.selecaoMenu.Play();
         SceneManager.LoadScene("Menu");
     }
     public void Jogar()
     {
+        Audio.instance.selecaoMenu.Play();
         Time.timeScale = 1;
         SceneManager.LoadScene("CutsCenesIniciais");
     }
     public void Creditos()
     {
+        Audio.instance.selecaoMenu.Play();
         SceneManager.LoadScene("Creditos");
     }
     public void Sair()
     {
+        Audio.instance.selecaoMenu.Play();
         Application.Quit();
         Debug.Log("Sair do jogo");
         DesselecionarButao();
@@ -42,6 +51,7 @@ public class Menu : MonoBehaviour
     
     public void ReiniciarCena()
     {
+        Audio.instance.selecaoMenu.Play();
         Destroy(_DontDestroy.gameObject);
         SceneManager.LoadScene("Fase1");
     }

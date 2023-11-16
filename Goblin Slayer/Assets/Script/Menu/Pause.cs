@@ -33,25 +33,25 @@ public class Pause : MonoBehaviour
     {
         if (painelEscolherPergaminho.activeSelf || painelGameOver.activeSelf || painelPergaminhoFogo.activeSelf || painelPergaminhoGelo.activeSelf)
         {
+            Audio.instance.selecaoMenu.Play();
             Time.timeScale = 0;
+        }
+        else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape) && !isGameOver)
+        {
+            if (painelPause.activeSelf)
+            {
+                VoltarPause();
+            }
+            else
+            {
+                Audio.instance.selecaoMenu.Play();
+                Time.timeScale = 0;
+                painelPause.SetActive(true);
+            }
         }
         else
         {
             Time.timeScale = 1;
-            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape) && !isGameOver)
-            {
-                if (painelPause.activeSelf)
-                {
-                    painelPause.SetActive(false);
-                    Time.timeScale = 1;
-                    DesselecionarButao();
-                }
-                else
-                {
-                    painelPause.SetActive(true);
-                    Time.timeScale = 0;
-                }
-            }
         }
 
         if (painelPergaminhoFogo.activeSelf)
@@ -67,6 +67,7 @@ public class Pause : MonoBehaviour
     }
     public void VoltarPause()
     {
+        Audio.instance.selecaoMenu.Play();
         painelPause.SetActive(false);
         Time.timeScale = 1;
         DesselecionarButao();
@@ -85,6 +86,7 @@ public class Pause : MonoBehaviour
 
     public void SubstituirPergaminhoFogo()
     {
+        Audio.instance.selecaoMenu.Play();
         GameManager.instance.pergaminhoFogo = false;
         GameManager.instance.pergaminhoRaio = true;
         painelEscolherPergaminho.SetActive(false);
@@ -92,6 +94,7 @@ public class Pause : MonoBehaviour
     
     public void SubstituirPergaminhoGelo()
     {
+        Audio.instance.selecaoMenu.Play();
         GameManager.instance.pergaminhoGelo = false;
         GameManager.instance.pergaminhoRaio = true;
         painelEscolherPergaminho.SetActive(false);
@@ -99,15 +102,18 @@ public class Pause : MonoBehaviour
 
     public void FecharSelecaoDePergaminhos()
     {
+        Audio.instance.selecaoMenu.Play();
         painelEscolherPergaminho.SetActive(false);
     }
     
     public void FecharPainelPergaminhoDeFogo()
     {
+        Audio.instance.selecaoMenu.Play();
         painelPergaminhoFogo.SetActive(false);
     }
     public void FecharPainelPergaminhoDeGelo()
     {
+        Audio.instance.selecaoMenu.Play();
         painelPergaminhoGelo.SetActive(false);
     }
 }

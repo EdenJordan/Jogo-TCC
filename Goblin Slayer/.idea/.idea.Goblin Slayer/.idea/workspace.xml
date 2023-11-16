@@ -6,53 +6,35 @@
   <component name="ChangeListManager">
     <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Animators/playeranimacoes.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Animators/playeranimacoes.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/BossController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemys/BossController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyArqueiroController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyArqueiroController.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyCorpoACorpo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyCorpoACorpo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tiros/Enemy/tiroFogo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tiros/Enemy/tiroFogo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tiros/Enemy/tiroGelo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tiros/Enemy/tiroGelo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tiros/Enemy/tiroRaio.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tiros/Enemy/tiroRaio.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CutsCenesFinais.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CutsCenesFinais.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CutsCenesIniciais.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CutsCenesIniciais.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase4.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/FaseBoss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FaseBoss.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Puzzle2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Puzzle2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Backup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Backup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Bau.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Bau.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Cam.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Cam.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/CutsCeneInicial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/CutsCeneInicial.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/DontDestroy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/DontDestroy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Puzzle3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Puzzle3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy/Boss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy/Boss.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy/EnemyControllerArqueiro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy/EnemyControllerArqueiro.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy/EnemyControllerCorpoACorpo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy/EnemyControllerCorpoACorpo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy/TiroEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy/TiroEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Menu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Menu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/MudancaDeFases.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/MudancaDeFases.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Pause.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Pause.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy/VidaEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy/VidaEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Importantes/CutsCeneInicial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Importantes/CutsCeneInicial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Importantes/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Importantes/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Importantes/MudancaDeFases.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Importantes/MudancaDeFases.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Menu/Bau.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Menu/Bau.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Menu/DontDestroy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Menu/DontDestroy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Menu/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Menu/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Menu/Pause.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Menu/Pause.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Player/TiroPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/TiroPlayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Player/VidaPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/VidaPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzle1e2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzle1e2.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzle3.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzle3.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzle3olhos.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzle3olhos.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzle4.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzle4.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/ResetarCaixa.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/ResetarCaixa.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzles/Puzzle1e2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Puzzles/Puzzle1e2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzles/Puzzle3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Puzzles/Puzzle3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzles/ResetarCaixa.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Puzzles/ResetarCaixa.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +42,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Importantes/CutsCenesFinais.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Puzzles/Agua.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -186,6 +168,8 @@
       <workItem from="1700087695040" duration="2226000" />
       <workItem from="1700091012909" duration="2443000" />
       <workItem from="1700094698528" duration="3548000" />
+      <workItem from="1700152453741" duration="9825000" />
+      <workItem from="1700163719696" duration="12922000" />
     </task>
     <servers />
   </component>

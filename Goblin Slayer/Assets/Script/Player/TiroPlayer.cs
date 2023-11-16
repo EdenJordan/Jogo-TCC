@@ -20,6 +20,13 @@ public class TiroPlayer : MonoBehaviour
 
     private int danoParaDar;
 
+    public static TiroPlayer instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -93,49 +100,7 @@ public class TiroPlayer : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Enemy"))
         {
-            if (tiroFogo)
-            {
-                danoParaDar = 2;
-                VidaEnemy.instance.vida(danoParaDar);
-                Destroy(gameObject);
-            }
-            if (tiroGelo)
-            {
-                danoParaDar = 1;
-                VidaEnemy.instance.vida(danoParaDar);
-                EnemyControllerArqueiro.instance.estaCongelado = true;
-                EnemyControllerArqueiro.instance._speedEnemy = 0;
-                Destroy(gameObject);
-            }
-            if (tiroRaio)
-            {
-                danoParaDar = 3;
-                VidaEnemy.instance.vida(danoParaDar);
-                Destroy(gameObject);
-            }
-        }
-        if (col.gameObject.CompareTag("Enemy2"))
-        {
-            if (tiroFogo)
-            {
-                danoParaDar = 2;
-                VidaEnemy.instance.vida(danoParaDar);
-                Destroy(gameObject);
-            }
-            if (tiroGelo)
-            {
-                danoParaDar = 1;
-                VidaEnemy.instance.vida(danoParaDar);
-                EnemyControllerCorpoACorpo.instance.estaCongelado = true;
-                EnemyControllerCorpoACorpo.instance.moveSpeed = 0;
-                Destroy(gameObject);
-            }
-            if (tiroRaio)
-            {
-                danoParaDar = 3;
-                VidaEnemy.instance.vida(danoParaDar);
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
         }
         if (col.gameObject.CompareTag("Boss"))
         {

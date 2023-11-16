@@ -8,7 +8,7 @@ public class MudancaDeFases : MonoBehaviour
 {
     private GameObject player;
     private GameObject localDeNascenca;
-    
+
     void Start()
     {
         GameManager.instance.FadeSetActive(true);
@@ -32,10 +32,11 @@ public class MudancaDeFases : MonoBehaviour
             {
                 SceneManager.LoadScene("Fase2");
                 GameManager.instance.fases++;
+                Audio.instance.floresta.Stop();
+                Audio.instance.caverna.Play();
             }
             else if (GameManager.instance.fases == 2)
             {
-                //0.04  
                 SceneManager.LoadScene("Puzzle2");
                 GameManager.instance.fases++;
             }

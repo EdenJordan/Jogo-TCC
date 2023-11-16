@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
         player = GameObject.Find("Player");
         anim = player.GetComponent<Animator>();
         _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        Audio.instance.floresta.Play();
     }
 
     void FixedUpdate()
@@ -55,7 +56,6 @@ public class PlayerController : MonoBehaviour
                 _Speed = 3;
                 estaCongelado = false;
                 voltarAandar = 0;
-                
             }
         }
         else

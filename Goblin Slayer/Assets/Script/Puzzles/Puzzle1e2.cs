@@ -58,6 +58,7 @@ public class Puzzle1e2 : MonoBehaviour
     {
         if (col.gameObject.tag == "Player" || col.gameObject.tag == "Caixa")
         {
+            Audio.instance.alavanca.Play();
             timer = 1;
             quantidadeDeObjetos++;
             if (GameManager.instance.fases == 1)
@@ -77,6 +78,7 @@ public class Puzzle1e2 : MonoBehaviour
     {
         if (col.gameObject.tag == "Player" || col.gameObject.tag == "Caixa")
         {
+            Audio.instance.alavanca.Play();
             quantidadeDeObjetos--;
         }
     }

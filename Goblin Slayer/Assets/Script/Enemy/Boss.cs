@@ -173,11 +173,14 @@ public class Boss : MonoBehaviour
         {
             case 1:
                 magicPrefab = fogoBallPrefab;
+                Audio.instance.fogo.Play();
                 break;
             case 2:
                 magicPrefab = geloBallPrefab;
+                Audio.instance.gelo.Play();
                 break;
             case 3:
+                Audio.instance.raio.Play();
                 magicPrefab = raioBallPrefab;
                 break;
             default:
@@ -194,6 +197,7 @@ public class Boss : MonoBehaviour
 
     public void TakeDamage(int danoParaReceber)
     {
+        Audio.instance.dano.Play();
         currentHealth -= danoParaReceber;
 
         if (currentHealth <= 0)
@@ -205,11 +209,12 @@ public class Boss : MonoBehaviour
 
     void Morte()
     {
+        Audio.instance.caverna.Stop();
+        Audio.instance.floresta.Play();
         Menu.instance.DontDestroy();
         SceneManager.LoadScene("CutsCenesFinais");
         Destroy(gameObject);
     }
-    
     //dano ao jogador
     private void OnTriggerEnter2D(Collider2D col)
     {

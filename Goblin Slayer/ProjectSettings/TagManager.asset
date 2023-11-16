@@ -16,6 +16,7 @@ TagManager:
   - Parede
   - Alavanca
   - LocalCaixa
+  - Audio
   layers:
   - Default
   - TransparentFX
