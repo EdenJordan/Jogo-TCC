@@ -40,8 +40,10 @@ public class EnemyControllerArqueiro : MonoBehaviour
     private float timer;
     private float angle;
     
-    //=====
+    //congelamento
     private float voltarAandar;
+    public bool estaCongelado;
+    public GameObject gelo;
 
     private void Awake()
     {
@@ -65,15 +67,21 @@ public class EnemyControllerArqueiro : MonoBehaviour
     void Update()
     {
         //voltar a andar
-        if (_speedEnemy == 0)
+        if (estaCongelado)
         {
+            gelo.SetActive(true);
             voltarAandar += Time.deltaTime;
             
             if (voltarAandar >= 2)
             {
-                _speedEnemy = 3;
+                _speedEnemy = 2;
                 voltarAandar = 0;
+                estaCongelado = false;
             }
+        }
+        else
+        {
+            gelo.SetActive(false);
         }
         
         CalcularDistancia();
@@ -134,7 +142,10 @@ public class EnemyControllerArqueiro : MonoBehaviour
     {
         if (distance >= _RangeAttackMax + _Tolerancia || distance <= _RangeAttackMin - _Tolerancia)
         {
-            _speedEnemy = 1.8f;
+            if (!estaCongelado)
+            {
+                _speedEnemy = 2f;
+            }
             transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, -(_speedEnemy) * Time.deltaTime);
         }
         else
@@ -159,7 +170,10 @@ public class EnemyControllerArqueiro : MonoBehaviour
     {
         if (distance >= _RangeAttackMax || distance <= _RangeAttackMin)
         {
-            _speedEnemy = 1.8f;
+            if (!estaCongelado)
+            {
+                _speedEnemy = 1.8f;
+            }
             transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, _speedEnemy * Time.deltaTime);
         }
         else

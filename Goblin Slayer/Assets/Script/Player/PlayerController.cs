@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     
     private GameManager _gameManager;
     private GameObject player;
+    public GameObject gelo;
+    
     private Animator anim;
 
     private float _H;
@@ -45,6 +47,7 @@ public class PlayerController : MonoBehaviour
         //voltar a andar
         if (estaCongelado)
         {
+            gelo.SetActive(true);
             voltarAandar += Time.deltaTime;
             
             if (voltarAandar >= 2)
@@ -55,6 +58,10 @@ public class PlayerController : MonoBehaviour
                 
             }
         }
+        else
+        {
+            gelo.SetActive(false);
+        }
         
         if (_gameManager.onFire || _gameManager.onFireFisico)
         {
@@ -62,7 +69,10 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            _Speed = 3;
+            if (!estaCongelado)
+            {
+                _Speed = 3;
+            }
         }
     }
 

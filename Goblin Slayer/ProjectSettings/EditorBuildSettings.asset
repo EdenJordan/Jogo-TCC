@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 54af91ee550d56b4db7e9f1fddd78c11
   - enabled: 1
+    path: Assets/Scenes/CutsCenesIniciais.unity
+    guid: 762e79c47fad56549b97e54dce238605
+  - enabled: 1
     path: Assets/Scenes/Fase1.unity
     guid: 5c77115131fb45f42845ead4c0a523c7
   - enabled: 1
@@ -32,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FaseBoss.unity
     guid: 096e458c090aaab44b2f71d9123edee9
+  - enabled: 1
+    path: Assets/Scenes/CutsCenesFinais.unity
+    guid: d78c83896b200f84c8f186111e441e3d
   - enabled: 1
     path: Assets/Scenes/Creditos.unity
     guid: 18d93eb67135c254b9eea63886d1d204

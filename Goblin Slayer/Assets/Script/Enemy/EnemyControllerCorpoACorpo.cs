@@ -15,6 +15,7 @@ public class EnemyControllerCorpoACorpo : MonoBehaviour
     
     public float moveSpeed = 2.0f;
     public float attackRange = 1.5f;
+    public float perseguicaoRange;
 
     private Transform player;
 
@@ -22,7 +23,10 @@ public class EnemyControllerCorpoACorpo : MonoBehaviour
     public bool estaAtacando;
     private float timeFire = 0;
 
+    //congelamento
     private float voltarAandar;
+    public bool estaCongelado;
+    public GameObject gelo;
 
     void Start()
     {
@@ -35,47 +39,57 @@ public class EnemyControllerCorpoACorpo : MonoBehaviour
 
     void Update()
     {
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        
         //voltar a andar
-        if (moveSpeed == 0)
+        if (estaCongelado)
         {
+            gelo.SetActive(true);
             voltarAandar += Time.deltaTime;
             
             if (voltarAandar >= 2)
             {
                 moveSpeed = 2;
                 voltarAandar = 0;
-            }
-        }
-        //Tempo entre os ataques
-        if (estaAtacando)
-        {
-            timeFire += Time.deltaTime;
-            
-            if (timeFire >= 1)
-            {
-                ataque.SetActive(false);
-            }
-            if (timeFire >= 2)
-            {
-                estaAtacando = false;
-            }
-        }
-
-        //ataque e perseguição
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-
-        if (distanceToPlayer <= attackRange)
-        {
-            if (!estaAtacando)
-            {
-                estaAtacando = true;
-                ataque.SetActive(true);
-                timeFire = 0;
+                estaCongelado = false;
             }
         }
         else
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+            gelo.SetActive(false);
+        }
+        
+        if (distanceToPlayer <= perseguicaoRange)
+        {
+            //Tempo entre os ataques
+            if (estaAtacando)
+            {
+                timeFire += Time.deltaTime;
+            
+                if (timeFire >= 1)
+                {
+                    ataque.SetActive(false);
+                }
+                if (timeFire >= 2)
+                {
+                    estaAtacando = false;
+                }
+            }
+
+            //ataque e perseguição
+            if (distanceToPlayer <= attackRange)
+            {
+                if (!estaAtacando)
+                {
+                    estaAtacando = true;
+                    ataque.SetActive(true);
+                    timeFire = 0;
+                }
+            }
+            else
+            {
+                transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+            }
         }
     }
 }

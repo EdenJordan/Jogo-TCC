@@ -36,7 +36,6 @@ public class VidaPlayer : MonoBehaviour
         {
             escudoObject.SetActive(true);
             PlayerController.instance._Speed = 0;
-            //inserir animação
         }
         else
         {

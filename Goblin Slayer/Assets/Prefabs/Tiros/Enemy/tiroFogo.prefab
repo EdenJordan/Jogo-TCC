@@ -137,4 +137,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  danoParaDar: 2
+  danoParaDar: 1
+  tiroGelo: 0

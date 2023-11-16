@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -35,8 +36,11 @@ public class Boss : MonoBehaviour
     public bool isFollowingPlayer;
     public float speed;
 
+    //congelamento
     private float voltarAandar;
-
+    public bool estaCongelado;
+    public GameObject gelo;
+    
     private void Awake()
     {
         instance = this;
@@ -61,15 +65,21 @@ public class Boss : MonoBehaviour
     void Update()
     {
         //voltar a andar
-        if (speed == 0)
+        if (estaCongelado)
         {
+            gelo.SetActive(true);
             voltarAandar += Time.deltaTime;
             
             if (voltarAandar >= 2)
             {
                 speed = 2;
                 voltarAandar = 0;
+                estaCongelado = false;
             }
+        }
+        else
+        {
+            gelo.SetActive(false);
         }
 
         //barra de vida
@@ -195,6 +205,8 @@ public class Boss : MonoBehaviour
 
     void Morte()
     {
+        Menu.instance.DontDestroy();
+        SceneManager.LoadScene("CutsCenesFinais");
         Destroy(gameObject);
     }
     

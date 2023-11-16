@@ -49,4 +49,12 @@ public class Menu : MonoBehaviour
     {
         EventSystem.current.SetSelectedGameObject(null);
     }
+
+    public void DontDestroy()
+    {
+        if (_DontDestroy != null)
+        {
+            Destroy(_DontDestroy.gameObject);
+        }
+    }
 }

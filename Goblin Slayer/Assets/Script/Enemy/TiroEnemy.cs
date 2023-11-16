@@ -44,11 +44,15 @@ public class TiroEnemy : MonoBehaviour
     {
         if (col.gameObject.CompareTag("ZonaDeDano"))
         {
-            VidaPlayer.instance.DanoPlayer(danoParaDar);
             if (tiroGelo)
             {
                 PlayerController.instance._Speed = 0;
                 PlayerController.instance.estaCongelado = true;
+                VidaPlayer.instance.DanoPlayer(danoParaDar);
+            }
+            else
+            {
+                VidaPlayer.instance.DanoPlayer(danoParaDar);
             }
         }
     }

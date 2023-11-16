@@ -103,6 +103,7 @@ public class TiroPlayer : MonoBehaviour
             {
                 danoParaDar = 1;
                 VidaEnemy.instance.vida(danoParaDar);
+                EnemyControllerArqueiro.instance.estaCongelado = true;
                 EnemyControllerArqueiro.instance._speedEnemy = 0;
                 Destroy(gameObject);
             }
@@ -125,6 +126,7 @@ public class TiroPlayer : MonoBehaviour
             {
                 danoParaDar = 1;
                 VidaEnemy.instance.vida(danoParaDar);
+                EnemyControllerCorpoACorpo.instance.estaCongelado = true;
                 EnemyControllerCorpoACorpo.instance.moveSpeed = 0;
                 Destroy(gameObject);
             }
@@ -146,6 +148,7 @@ public class TiroPlayer : MonoBehaviour
             if (tiroGelo)
             {
                 danoParaDar = 1;
+                Boss.instance.estaCongelado = true;
                 Boss.instance.speed = 0;
                 Boss.instance.TakeDamage(danoParaDar);
                 Destroy(gameObject);

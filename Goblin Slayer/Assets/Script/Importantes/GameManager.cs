@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (tiroAtual == 2)
+                if (tiroAtual == 2) //escudo
                 {
                     tempoDeCadaAtaque = 0.5f; //tava 3
                     VidaPlayer.instance.escudo = true;
