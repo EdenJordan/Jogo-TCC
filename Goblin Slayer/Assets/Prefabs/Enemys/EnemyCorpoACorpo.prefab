@@ -103,8 +103,10 @@ MonoBehaviour:
   moveSpeed: 2
   attackRange: 1
   perseguicaoRange: 7
+  SpriteEnemy: {fileID: 371064259805390906}
   ataque: {fileID: 6546710096929684278}
   estaAtacando: 0
+  animator: {fileID: 0}
   estaCongelado: 0
   gelo: {fileID: 2713123597795823979}
 --- !u!1 &371064259805390906

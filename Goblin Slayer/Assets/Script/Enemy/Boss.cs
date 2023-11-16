@@ -8,8 +8,13 @@ using Random = UnityEngine.Random;
 
 public class Boss : MonoBehaviour
 {
+    private SpriteRenderer spriteRenderer;
+    private Animator Animator;
+    public GameObject SrpiteBoss;
+    
     public static Boss instance;
     private GameObject player;
+    private Transform targetPlayer;
     private float angle;
     
     //vida do boss
@@ -48,6 +53,11 @@ public class Boss : MonoBehaviour
     
     void Start()
     {
+        targetPlayer = FindObjectOfType<PlayerController>().transform;
+        spriteRenderer = SrpiteBoss.GetComponent<SpriteRenderer>();
+        Animator = SrpiteBoss.GetComponent<Animator>();
+        
+        
         //seguir jogador
         isFollowingPlayer = true;
         voltarAandar = 0;
@@ -64,18 +74,49 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
+        if (targetPlayer.position.y > transform.position.y && !estaCongelado && !isFire && isFollowingPlayer && !estaAtacando)
+        {
+            Animator.SetInteger("Transicao", 2);
+        }
+        
+        if (targetPlayer.position.y < transform.position.y && !estaCongelado && !isFire && isFollowingPlayer && !estaAtacando)
+        {
+            Animator.SetInteger("Transicao", 8);
+        }
+
+        spriteRenderer.flipX = targetPlayer.position.x > transform.position.x;
+        
         //voltar a andar
         if (estaCongelado)
         {
-            gelo.SetActive(true);
-            voltarAandar += Time.deltaTime;
-            
-            if (voltarAandar >= 2)
+            if (targetPlayer.position.y > transform.position.y)
             {
-                speed = 2;
-                voltarAandar = 0;
-                estaCongelado = false;
+                Animator.SetInteger("Transicao", 1);
+                gelo.SetActive(true);
+                voltarAandar += Time.deltaTime;
+            
+                if (voltarAandar >= 2)
+                {
+                    speed = 2;
+                    voltarAandar = 0;
+                    estaCongelado = false;
+                }
             }
+            else if (targetPlayer.position.y < transform.position.y)
+            {
+                Animator.SetInteger("Transicao", 7);
+                gelo.SetActive(true);
+                voltarAandar += Time.deltaTime;
+            
+                if (voltarAandar >= 2)
+                {
+                    speed = 2;
+                    voltarAandar = 0;
+                    estaCongelado = false;
+                }
+                
+            }
+
         }
         else
         {
@@ -110,8 +151,10 @@ public class Boss : MonoBehaviour
                 followTimer += Time.deltaTime;
                 if (followTimer >= 1f)
                 {
+                    
                     isFollowingPlayer = true;
                     followTimer = 2f;
+
                 }
             }
 
@@ -129,6 +172,7 @@ public class Boss : MonoBehaviour
                         if (followTimer <= 0f)
                         {
                             isFollowingPlayer = false;
+                            
                         }
                     }
                     else
@@ -145,7 +189,16 @@ public class Boss : MonoBehaviour
             //ataque fisico
             if (!isFollowingPlayer && distanceToPlayer < attackRange && Time.time - lastAttackTime > attackCooldown)
             {
-                AttackMelee(player);
+                if (targetPlayer.position.y > transform.position.y)
+                {
+                    Animator.SetInteger("Transicao", 6);
+                    AttackMelee(player);
+                }
+                if (targetPlayer.position.y < transform.position.y)
+                {
+                    Animator.SetInteger("Transicao", 12);
+                    AttackMelee(player);
+                }
             }
             //ataque a distancia
             if (!isFollowingPlayer && distanceToPlayer > attackRange && Time.time - lastAttackTime > attackCooldown)
@@ -172,13 +225,43 @@ public class Boss : MonoBehaviour
         switch (randomAttack)
         {
             case 1:
-                magicPrefab = fogoBallPrefab;
+                if (targetPlayer.position.y > transform.position.y)
+                {
+                    Animator.SetInteger("Transicao", 3);
+                    magicPrefab = fogoBallPrefab;
+                }
+
+                if (targetPlayer.position.y < transform.position.y)
+                {
+                    Animator.SetInteger("Transicao", 9);
+                    magicPrefab = fogoBallPrefab;
+                }
                 break;
             case 2:
-                magicPrefab = geloBallPrefab;
+                if (targetPlayer.position.y > transform.position.y)
+                {
+                    Animator.SetInteger("Transicao", 4);
+                    magicPrefab = geloBallPrefab;
+                }
+
+                if (targetPlayer.position.y < transform.position.y)
+                {
+                    Animator.SetInteger("Transicao", 10);
+                    magicPrefab = geloBallPrefab;
+                }
                 break;
             case 3:
-                magicPrefab = raioBallPrefab;
+                if (targetPlayer.position.y > transform.position.y)
+                {
+                    Animator.SetInteger("Transicao", 5);
+                    magicPrefab = raioBallPrefab;
+                }
+
+                if (targetPlayer.position.y < transform.position.y)
+                {
+                    Animator.SetInteger("Transicao", 11);
+                    magicPrefab = raioBallPrefab;
+                }
                 break;
             default:
                 break;

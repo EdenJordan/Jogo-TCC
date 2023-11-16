@@ -16,6 +16,8 @@ public class EnemyControllerArqueiro : MonoBehaviour
     public static EnemyControllerArqueiro instance;
     
     private Transform targetPlayer;
+    
+    private SpriteRenderer spriteRenderer;
 
     public float _speedEnemy;
     private float distance;
@@ -28,6 +30,9 @@ public class EnemyControllerArqueiro : MonoBehaviour
     public float _Tolerancia = 0.5f;
     
     public EnemyState _estado;
+
+    private Animator Animator;
+    public GameObject SpriteEnemyArqueiro;
     
     //Tiro
     public Transform arco;
@@ -53,11 +58,14 @@ public class EnemyControllerArqueiro : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spriteRenderer = SpriteEnemyArqueiro.GetComponent<SpriteRenderer>();
+        
         _estado = EnemyState.parado;
         _speedEnemy = 3;
         targetPlayer = FindObjectOfType<PlayerController>().transform;
+        Animator = SpriteEnemyArqueiro.GetComponent<Animator>();
         //Tiro
-        timer = 1;
+        timer = 0.5f;
         
         //=====
         voltarAandar = 0;
@@ -66,17 +74,39 @@ public class EnemyControllerArqueiro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        spriteRenderer.flipX = targetPlayer.position.x > transform.position.x;
+        
         //voltar a andar
         if (estaCongelado)
         {
-            gelo.SetActive(true);
-            voltarAandar += Time.deltaTime;
-            
-            if (voltarAandar >= 2)
+            if (targetPlayer.position.y > transform.position.y)
             {
-                _speedEnemy = 2;
-                voltarAandar = 0;
-                estaCongelado = false;
+                Animator.SetInteger("Transicao", 1);
+                gelo.SetActive(true);
+                voltarAandar += Time.deltaTime;
+
+                if (voltarAandar >= 2)
+                {
+                    _speedEnemy = 2;
+                    voltarAandar = 0;
+                    estaCongelado = false;
+                    Animator.SetInteger("Transicao", 0);
+                }
+            }
+            else if (targetPlayer.position.y < transform.position.y)
+            {
+                Animator.SetInteger("Transicao", 4);
+                gelo.SetActive(true);
+                voltarAandar += Time.deltaTime;
+
+                if (voltarAandar >= 2)
+                {
+                    _speedEnemy = 2;
+                    voltarAandar = 0;
+                    estaCongelado = false;
+                    Animator.SetInteger("Transicao", 0);
+                }
             }
         }
         else
@@ -95,15 +125,49 @@ public class EnemyControllerArqueiro : MonoBehaviour
         switch (_estado)
         {
             case EnemyState.parado:
+                if (targetPlayer.position.y > transform.position.y)
+                {
+                    Animator.SetInteger("Transicao", 1);
+                }
+                if (targetPlayer.position.y < transform.position.y)
+                {
+                    Animator.SetInteger("Transicao", 4);
+                }
                 Parado();
                 break;
             case EnemyState.aproximando:
+                if (targetPlayer.position.y > transform.position.y)
+                {
+                    Animator.SetInteger("Transicao", 2);
+                }
+                if (targetPlayer.position.y < transform.position.y)
+                {
+                    Animator.SetInteger("Transicao", 5);
+                }
                 Aproximando();
                 break;
             case EnemyState.afastando:
+                if (targetPlayer.position.y > transform.position.y)
+                {
+                    spriteRenderer.flipX = targetPlayer.position.x < transform.position.x;
+                    Animator.SetInteger("Transicao", 5);
+                }
+                if (targetPlayer.position.y < transform.position.y)
+                {
+                    spriteRenderer.flipX = targetPlayer.position.x < transform.position.x;
+                    Animator.SetInteger("Transicao", 2);
+                }
                 Afastando();
                 break;
             case EnemyState.atacando:
+                if (targetPlayer.position.y > transform.position.y)
+                {
+                    Animator.SetInteger("Transicao", 3);
+                }
+                if (targetPlayer.position.y < transform.position.y)
+                {
+                    Animator.SetInteger("Transicao", 6);
+                }
                 Atacando();
                 break;
             default:

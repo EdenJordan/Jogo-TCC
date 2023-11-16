@@ -226,6 +226,7 @@ MonoBehaviour:
   _RangeAttackMin: 6
   _Tolerancia: 1
   _estado: 0
+  SpriteEnemyArqueiro: {fileID: 5322009998231536968}
   arco: {fileID: 5322009997168893029}
   _Flecha: {fileID: 2610076008157637023, guid: ad3e2798a543a8945b3b0912e037aea2, type: 3}
   localDeDisparo: {fileID: 5322009998354648243}
