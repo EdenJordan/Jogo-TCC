@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 334e05ac099aa784b8684786bfac3b7d
+guid: 606e0cbca59100f49be4fbc6eeab2b6c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: goblinwalkbaixo-Sheet_0
+      name: Reiataquefisicodown-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 29
-        height: 30
+        width: 62
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 676cff3191d901c49aa92fe9b4ae7da8
-      internalID: -1994230495
+      spriteID: de0e78259d7ef76459423afcb3e652cc
+      internalID: 559710330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goblinwalkbaixo-Sheet_1
+      name: Reiataquefisicodown-Sheet_1
       rect:
         serializedVersion: 2
-        x: 29
+        x: 62
         y: 0
-        width: 29
-        height: 30
+        width: 62
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a48e2d5f44dfff44a14e55604a1e7cb
-      internalID: 1213794331
+      spriteID: dee8a5e6f8e3fe649833601a20a50a87
+      internalID: -1859384935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goblinwalkbaixo-Sheet_2
+      name: Reiataquefisicodown-Sheet_2
       rect:
         serializedVersion: 2
-        x: 58
+        x: 124
         y: 0
-        width: 29
-        height: 30
+        width: 62
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 204d8d002de3c1c40be4356f4cf6153a
-      internalID: -516156548
+      spriteID: 805b855404ad7f14e90536e223ef7438
+      internalID: -1523842132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goblinwalkbaixo-Sheet_3
+      name: Reiataquefisicodown-Sheet_3
       rect:
         serializedVersion: 2
-        x: 87
+        x: 186
         y: 0
-        width: 29
-        height: 30
+        width: 62
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1577002ca5851bf469ff532eea54e123
-      internalID: -2069080441
+      spriteID: 5f1dfaff72434a341ba23d0b47cca768
+      internalID: -1065371305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goblinwalkbaixo-Sheet_4
+      name: Reiataquefisicodown-Sheet_4
       rect:
         serializedVersion: 2
-        x: 116
+        x: 248
         y: 0
-        width: 29
-        height: 30
+        width: 62
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b62070e28a2260479f49a3d3c2587eb
-      internalID: 327114234
+      spriteID: 0cc4897107e434149bbb2f80444a16fd
+      internalID: 1885905265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goblinwalkbaixo-Sheet_5
+      name: Reiataquefisicodown-Sheet_5
       rect:
         serializedVersion: 2
-        x: 145
+        x: 310
         y: 0
-        width: 29
-        height: 30
+        width: 62
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d885e10c58204e846a46084092fcdb1f
-      internalID: -595095045
+      spriteID: 37016c8ed568b264e8fce7bb55b45596
+      internalID: -816814647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goblinwalkbaixo-Sheet_6
+      name: Reiataquefisicodown-Sheet_6
       rect:
         serializedVersion: 2
-        x: 174
+        x: 372
         y: 0
-        width: 29
-        height: 30
+        width: 62
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,29 +244,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60b19b64b0836a843b2b3cd72226fe26
-      internalID: 1334324008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: goblinwalkbaixo-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 203
-        y: 0
-        width: 29
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86569b1c547d5bc4a9af6fd9b8df2d76
-      internalID: 1201411356
+      spriteID: 927de4636dd8c4f46af4d06566e72220
+      internalID: 401920939
       vertices: []
       indices: 
       edges: []
@@ -282,14 +261,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      goblinwalkbaixo-Sheet_2: -516156548
-      goblinwalkbaixo-Sheet_0: -1994230495
-      goblinwalkbaixo-Sheet_6: 1334324008
-      goblinwalkbaixo-Sheet_3: -2069080441
-      goblinwalkbaixo-Sheet_7: 1201411356
-      goblinwalkbaixo-Sheet_4: 327114234
-      goblinwalkbaixo-Sheet_5: -595095045
-      goblinwalkbaixo-Sheet_1: 1213794331
+      Reiataquefisicodown-Sheet_2: -1523842132
+      Reiataquefisicodown-Sheet_1: -1859384935
+      Reiataquefisicodown-Sheet_3: -1065371305
+      Reiataquefisicodown-Sheet_6: 401920939
+      Reiataquefisicodown-Sheet_0: 559710330
+      Reiataquefisicodown-Sheet_4: 1885905265
+      Reiataquefisicodown-Sheet_5: -816814647
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
