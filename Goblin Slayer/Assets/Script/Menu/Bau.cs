@@ -25,18 +25,21 @@ public class Bau : MonoBehaviour
         {
             if (GameManager.instance.fases == 2 && bauFechado)
             {
+                Audio.instance.coletapergaminhos.Play();
                 Pause.instance.painelPergaminhoFogo.SetActive(true);
                 bauFechado = false;
             }
             
             if (GameManager.instance.fases == 4 && bauFechado)
             {
+                Audio.instance.coletapergaminhos.Play();
                 Pause.instance.painelPergaminhoGelo.SetActive(true);
                 bauFechado = false;
             }
             
             if (GameManager.instance.fases == 6 && bauFechado)
             {
+                Audio.instance.coletapergaminhos.Play();
                 Pause.instance.painelEscolherPergaminho.SetActive(true);
                 bauFechado = false;
             }

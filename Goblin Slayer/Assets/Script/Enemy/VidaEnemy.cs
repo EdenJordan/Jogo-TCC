@@ -22,6 +22,7 @@ public class VidaEnemy : MonoBehaviour
     
     public void vida(int DanoParaReceber)
     {
+        Audio.instance.dano.Play();
         vidaAtual -= DanoParaReceber;
 
         if (vidaAtual <= 0)
@@ -35,6 +36,21 @@ public class VidaEnemy : MonoBehaviour
         if (col.gameObject.CompareTag("AtaquePlayer"))
         {
             vida(2);
+        }
+        if (col.gameObject.CompareTag("TiroPlayer"))
+        {
+            if (TiroPlayer.instance.tiroFogo)
+            {
+                vida(2);
+            }
+            if (TiroPlayer.instance.tiroGelo)
+            {
+                vida(1);
+            }
+            if (TiroPlayer.instance.tiroRaio)
+            {
+                vida(3);
+            }
         }
     }
 }

@@ -38,17 +38,20 @@ public class Puzzle3 : MonoBehaviour
             
             if (alavanca1)
             {
+                Audio.instance.alavanca.Play();
                 Puzzle3olhos.instance.animOlho1 = !Puzzle3olhos.instance.animOlho1;
                 Puzzle3olhos.instance.animOlho2 = !Puzzle3olhos.instance.animOlho2;
             }
             if (alavanca2)
             {
+                Audio.instance.alavanca.Play();
                 Puzzle3olhos.instance.animOlho1 = !Puzzle3olhos.instance.animOlho1;
                 Puzzle3olhos.instance.animOlho2 = !Puzzle3olhos.instance.animOlho2;
                 Puzzle3olhos.instance.animOlho3 = !Puzzle3olhos.instance.animOlho3;
             }
             if (alavanca3)
             {
+                Audio.instance.alavanca.Play();
                 Puzzle3olhos.instance.animOlho2 = !Puzzle3olhos.instance.animOlho2;
                 Puzzle3olhos.instance.animOlho3 = !Puzzle3olhos.instance.animOlho3;
             }

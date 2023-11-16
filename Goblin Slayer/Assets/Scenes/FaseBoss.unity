@@ -575,7 +575,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &494126639
 MonoBehaviour:
@@ -4493,3 +4493,68 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &2040858905
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1535247980757892652, guid: e159f85d624cce4448fba16aeea4fa1c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535247980757892652, guid: e159f85d624cce4448fba16aeea4fa1c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.299238
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535247980757892652, guid: e159f85d624cce4448fba16aeea4fa1c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.588184
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535247980757892652, guid: e159f85d624cce4448fba16aeea4fa1c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535247980757892652, guid: e159f85d624cce4448fba16aeea4fa1c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535247980757892652, guid: e159f85d624cce4448fba16aeea4fa1c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535247980757892652, guid: e159f85d624cce4448fba16aeea4fa1c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535247980757892652, guid: e159f85d624cce4448fba16aeea4fa1c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535247980757892652, guid: e159f85d624cce4448fba16aeea4fa1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535247980757892652, guid: e159f85d624cce4448fba16aeea4fa1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535247980757892652, guid: e159f85d624cce4448fba16aeea4fa1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535247980757892655, guid: e159f85d624cce4448fba16aeea4fa1c, type: 3}
+      propertyPath: m_Name
+      value: BossController
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535247982375668499, guid: e159f85d624cce4448fba16aeea4fa1c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535247982375668499, guid: e159f85d624cce4448fba16aeea4fa1c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e159f85d624cce4448fba16aeea4fa1c, type: 3}

@@ -39,6 +39,7 @@ public class CutsCeneInicial : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                Audio.instance.selecaoMenu.Play();
                 cutsCeneVez = 8;
             }
             
@@ -55,6 +56,7 @@ public class CutsCeneInicial : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                Audio.instance.selecaoMenu.Play();
                 fade.SetActive(false);
                 Time.timeScale = 1;
                 SceneManager.LoadScene("Fase1");

@@ -15,16 +15,11 @@ public class ResetarCaixa : MonoBehaviour
         localCaixa = GameObject.FindWithTag("LocalCaixa");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            Audio.instance.alavanca.Play();
             transform.eulerAngles = new Vector3(0, 180, 0);
             caixa.transform.position = localCaixa.transform.position;
         }
@@ -34,6 +29,7 @@ public class ResetarCaixa : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            Audio.instance.alavanca.Play();
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
     }

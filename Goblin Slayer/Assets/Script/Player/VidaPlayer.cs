@@ -57,6 +57,7 @@ public class VidaPlayer : MonoBehaviour
 
     public void DanoPlayer(int danoParaReceber)
     {
+        Audio.instance.dano.Play();
         if (!escudo)
         {
             vidaAtual -= danoParaReceber;

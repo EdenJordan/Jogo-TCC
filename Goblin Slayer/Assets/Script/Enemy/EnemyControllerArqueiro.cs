@@ -224,6 +224,7 @@ public class EnemyControllerArqueiro : MonoBehaviour
         
         if (timer <= 0)
         {
+            Audio.instance.arco.Play();
             Instantiate(_Flecha, localDeDisparo.position, arco.rotation);
             timer = 2;
         }
@@ -250,5 +251,17 @@ public class EnemyControllerArqueiro : MonoBehaviour
         distance = Vector2.Distance(transform.position, targetPlayer.position);
         var heading = (transform.position - targetPlayer.position);
         direction = heading / distance;
+    }
+
+    public void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("TiroPlayer"))
+        {
+            if (TiroPlayer.instance.tiroGelo)
+            {
+                estaCongelado = true;
+                _speedEnemy = 0;
+            }
+        }
     }
 }
