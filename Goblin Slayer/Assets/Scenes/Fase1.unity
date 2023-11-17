@@ -37580,7 +37580,7 @@ Tilemap:
       - {fileID: -1786071009, guid: 893e94110458f8640bd48ea0bcafb1a8, type: 3}
       - {fileID: -1723862020, guid: 0b2f1141e4e5e5c4fbf422ac42866d20, type: 3}
       - {fileID: -925357662, guid: a3c115c0eabd8784a9195d0895461228, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -15, y: -12, z: 0}
@@ -37628,7 +37628,7 @@ Tilemap:
       - {fileID: -1786071009, guid: 893e94110458f8640bd48ea0bcafb1a8, type: 3}
       - {fileID: -1723862020, guid: 0b2f1141e4e5e5c4fbf422ac42866d20, type: 3}
       - {fileID: -925357662, guid: a3c115c0eabd8784a9195d0895461228, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -15, y: -11, z: 0}
@@ -37976,7 +37976,7 @@ Tilemap:
       - {fileID: 710646804, guid: 893e94110458f8640bd48ea0bcafb1a8, type: 3}
       - {fileID: 2085013639, guid: 0b2f1141e4e5e5c4fbf422ac42866d20, type: 3}
       - {fileID: -2095613923, guid: a3c115c0eabd8784a9195d0895461228, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -11, y: -8, z: 0}
@@ -38108,7 +38108,7 @@ Tilemap:
       - {fileID: -1786071009, guid: 893e94110458f8640bd48ea0bcafb1a8, type: 3}
       - {fileID: -1723862020, guid: 0b2f1141e4e5e5c4fbf422ac42866d20, type: 3}
       - {fileID: -925357662, guid: a3c115c0eabd8784a9195d0895461228, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 8, y: -7, z: 0}
@@ -38612,7 +38612,7 @@ Tilemap:
       - {fileID: -1895682875, guid: 893e94110458f8640bd48ea0bcafb1a8, type: 3}
       - {fileID: 974225526, guid: 0b2f1141e4e5e5c4fbf422ac42866d20, type: 3}
       - {fileID: 120633808, guid: a3c115c0eabd8784a9195d0895461228, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -6, y: 11, z: 0}
@@ -38624,7 +38624,7 @@ Tilemap:
       - {fileID: -1895682875, guid: 893e94110458f8640bd48ea0bcafb1a8, type: 3}
       - {fileID: 974225526, guid: 0b2f1141e4e5e5c4fbf422ac42866d20, type: 3}
       - {fileID: 120633808, guid: a3c115c0eabd8784a9195d0895461228, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -5, y: 11, z: 0}
@@ -42276,7 +42276,7 @@ Tilemap:
       - {fileID: 1567087228, guid: 893e94110458f8640bd48ea0bcafb1a8, type: 3}
       - {fileID: 84632592, guid: 0b2f1141e4e5e5c4fbf422ac42866d20, type: 3}
       - {fileID: -828655622, guid: a3c115c0eabd8784a9195d0895461228, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 23, y: 4, z: 0}
@@ -42324,7 +42324,7 @@ Tilemap:
       - {fileID: 1567087228, guid: 893e94110458f8640bd48ea0bcafb1a8, type: 3}
       - {fileID: 84632592, guid: 0b2f1141e4e5e5c4fbf422ac42866d20, type: 3}
       - {fileID: -828655622, guid: a3c115c0eabd8784a9195d0895461228, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 23, y: 5, z: 0}
@@ -54295,11 +54295,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 371064259333347776, guid: 40eda65490daefe42a7bfd0f894868cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4267347
+      value: 2.74
       objectReference: {fileID: 0}
     - target: {fileID: 371064259333347776, guid: 40eda65490daefe42a7bfd0f894868cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7369244
+      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 371064259333347776, guid: 40eda65490daefe42a7bfd0f894868cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -55393,8 +55393,8 @@ MonoBehaviour:
   tiroAtual: 0
   onFire: 0
   onFireFisico: 0
-  pergaminhoFogo: 1
-  pergaminhoGelo: 1
+  pergaminhoFogo: 0
+  pergaminhoGelo: 0
   pergaminhoRaio: 0
   attackDireita: {fileID: 945966475}
   attackCima: {fileID: 58689654}
