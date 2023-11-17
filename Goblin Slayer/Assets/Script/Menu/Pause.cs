@@ -57,6 +57,8 @@ public class Pause : MonoBehaviour
         if (painelPergaminhoFogo.activeSelf)
         {
             GameManager.instance.pergaminhoFogo = true;
+            
+            
         }
 
         if (painelPergaminhoGelo.activeSelf)
@@ -89,6 +91,8 @@ public class Pause : MonoBehaviour
         Audio.instance.selecaoMenu.Play();
         GameManager.instance.pergaminhoFogo = false;
         GameManager.instance.pergaminhoRaio = true;
+        GameManager.instance.slot7.SetActive(true);
+        GameManager.instance.tiroAtual = 5;
         painelEscolherPergaminho.SetActive(false);
     }
     
@@ -97,6 +101,8 @@ public class Pause : MonoBehaviour
         Audio.instance.selecaoMenu.Play();
         GameManager.instance.pergaminhoGelo = false;
         GameManager.instance.pergaminhoRaio = true;
+        GameManager.instance.slot17.SetActive(true);
+        GameManager.instance.tiroAtual = 5;
         painelEscolherPergaminho.SetActive(false);
     }
 

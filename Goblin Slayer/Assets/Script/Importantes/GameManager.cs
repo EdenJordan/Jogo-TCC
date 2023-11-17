@@ -8,10 +8,32 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     //Hud
+    //espada,escudo,fogo e gelo:
     public GameObject slot1;
     public GameObject slot2;
     public GameObject slot3;
     public GameObject slot4;
+    //espada,escudo,gelo e raio:
+    public GameObject slot5;
+    public GameObject slot6;
+    public GameObject slot7;
+    public GameObject slot8;
+    //espada e escudo
+    public GameObject slot9;
+    public GameObject slot10;
+    //espada,escudo, fogo:
+    public GameObject slot11;
+    public GameObject slot12;
+    public GameObject slot13;
+    //espada,escudo,fogo e raio:
+    public GameObject slot14;
+    public GameObject slot15;
+    public GameObject slot16;
+    public GameObject slot17;
+    
+    
+    
+    
 
     public GameObject fadeOut;
     
@@ -59,14 +81,13 @@ public class GameManager : MonoBehaviour
         onFireFisico = false;
         tiroAtual = 1;
         ProcurarObjetos();
-
+        
         fases = 1;
         
         //hud
-        slot1.SetActive(true); //espada
-        slot2.SetActive(false); //escudo
-        slot3.SetActive(false); //pergaminho1
-        slot4.SetActive(false); //pergaminho2
+        slot9.SetActive(true); //espada
+        slot10.SetActive(false); //escudo
+        
     }
 
     // Update is called once per frame
@@ -76,6 +97,7 @@ public class GameManager : MonoBehaviour
         Atira();
         EscolherTiro();
         HudMenu();
+        
 
         vidaPlayer.text = " x " + VidaPlayer.vidaAtual;
     }
@@ -216,38 +238,159 @@ public class GameManager : MonoBehaviour
 
     public void HudMenu()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (!pergaminhoFogo && !pergaminhoGelo)
         {
-            Audio.instance.selecaoMenu.Play();
-            slot1.SetActive(true); //espada
-            slot2.SetActive(false); //escudo
-            slot3.SetActive(false); //pergaminho1
-            slot4.SetActive(false); //pergaminho2
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot9.SetActive(true);
+                slot10.SetActive(false);
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot9.SetActive(false);
+                slot10.SetActive(true);
+            }
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (pergaminhoGelo && pergaminhoFogo)
         {
-            Audio.instance.selecaoMenu.Play();
-            slot1.SetActive(false); //espada
-            slot2.SetActive(true); //escudo
-            slot3.SetActive(false); //pergaminho1
-            slot4.SetActive(false); //pergaminho2
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot1.SetActive(true); //espada
+                slot2.SetActive(false); //escudo
+                slot3.SetActive(false); //pergaminho1
+                slot4.SetActive(false); //pergaminho2
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot1.SetActive(false); //espada
+                slot2.SetActive(true); //escudo
+                slot3.SetActive(false); //pergaminho1
+                slot4.SetActive(false); //pergaminho2
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot1.SetActive(false); //espada
+                slot2.SetActive(false); //escudo
+                slot3.SetActive(true); //pergaminho1
+                slot4.SetActive(false); //pergaminho2
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot1.SetActive(false); //espada
+                slot2.SetActive(false); //escudo
+                slot3.SetActive(false); //pergaminho1
+                slot4.SetActive(true); //pergaminho2
+            }
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+
+        if (pergaminhoGelo && pergaminhoRaio)
         {
-            Audio.instance.selecaoMenu.Play();
-            slot1.SetActive(false); //espada
-            slot2.SetActive(false); //escudo
-            slot3.SetActive(true); //pergaminho1
-            slot4.SetActive(false); //pergaminho2
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot5.SetActive(true); //espada
+                slot6.SetActive(false); //escudo
+                slot7.SetActive(false); //pergaminho1
+                slot8.SetActive(false); //pergaminho2
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot5.SetActive(false); //espada
+                slot6.SetActive(true); //escudo
+                slot7.SetActive(false); //pergaminho1
+                slot8.SetActive(false); //pergaminho2
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot5.SetActive(false); //espada
+                slot6.SetActive(false); //escudo
+                slot7.SetActive(true); //pergaminho1
+                slot8.SetActive(false); //pergaminho2
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot5.SetActive(false); //espada
+                slot6.SetActive(false); //escudo
+                slot7.SetActive(false); //pergaminho1
+                slot8.SetActive(true); //pergaminho2
+            }
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (pergaminhoFogo && pergaminhoRaio)
         {
-            Audio.instance.selecaoMenu.Play();
-            slot1.SetActive(false); //espada
-            slot2.SetActive(false); //escudo
-            slot3.SetActive(false); //pergaminho1
-            slot4.SetActive(true); //pergaminho2
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot14.SetActive(true); //espada
+                slot15.SetActive(false); //escudo
+                slot16.SetActive(false); //pergaminho1
+                slot17.SetActive(false); //pergaminho2
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot14.SetActive(false); //espada
+                slot15.SetActive(true); //escudo
+                slot16.SetActive(false); //pergaminho1
+                slot17.SetActive(false); //pergaminho2
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot14.SetActive(false); //espada
+                slot15.SetActive(false); //escudo
+                slot16.SetActive(true); //pergaminho1
+                slot17.SetActive(false); //pergaminho2
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot14.SetActive(false); //espada
+                slot15.SetActive(false); //escudo
+                slot16.SetActive(false); //pergaminho1
+                slot17.SetActive(true); //pergaminho2
+            }
+            
         }
+
+        if (pergaminhoFogo && !pergaminhoGelo)
+        {
+          
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot11.SetActive(true); //espada
+                slot12.SetActive(false); //escudo
+                slot13.SetActive(false); //pergaminho1
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot11.SetActive(false); //espada
+                slot12.SetActive(true); //escudo
+                slot13.SetActive(false); //pergaminho1
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                Audio.instance.selecaoMenu.Play();
+                slot11.SetActive(false); //espada
+                slot12.SetActive(false); //escudo
+                slot13.SetActive(true); //pergaminho1
+            }
+            
+        }
+
+
     }
 
     public void FadeSetActive(bool valor)
