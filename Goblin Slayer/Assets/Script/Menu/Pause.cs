@@ -49,7 +49,7 @@ public class Pause : MonoBehaviour
                 painelPause.SetActive(true);
             }
         }
-        else
+        else if (!painelPause.activeSelf)
         {
             Time.timeScale = 1;
         }

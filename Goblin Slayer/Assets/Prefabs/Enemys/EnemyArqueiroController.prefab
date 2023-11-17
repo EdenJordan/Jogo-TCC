@@ -180,8 +180,8 @@ GameObject:
   - component: {fileID: 5322009998190521296}
   - component: {fileID: 5322009998190521295}
   - component: {fileID: 5322009998190521294}
-  - component: {fileID: 5322009998190521293}
   - component: {fileID: 3334502349261004370}
+  - component: {fileID: 4873500732871867306}
   m_Layer: 0
   m_Name: EnemyArqueiroController
   m_TagString: Enemy
@@ -253,22 +253,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &5322009998190521293
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5322009998190521292}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: af197da2e12c938458becb55c7255920, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &3334502349261004370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,6 +266,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaMaxima: 5
+--- !u!61 &4873500732871867306
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5322009998190521292}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: af197da2e12c938458becb55c7255920, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06905389, y: -0.0030023158}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.3094592, y: 0.72978824}
+  m_EdgeRadius: 0
 --- !u!1 &5322009998231536968
 GameObject:
   m_ObjectHideFlags: 0

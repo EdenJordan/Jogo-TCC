@@ -55,5 +55,10 @@ public class TiroEnemy : MonoBehaviour
                 VidaPlayer.instance.DanoPlayer(danoParaDar);
             }
         }
+
+        if (col.gameObject.CompareTag("Parede"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -19,7 +19,7 @@ public class VidaPlayer : MonoBehaviour
     void Start()
     {
         _pause = GameObject.Find("MenuManager").GetComponent<Pause>();
-        vidaMaxima = 10;
+        vidaMaxima = 20;
         vidaAtual = vidaMaxima;
         escudo = false;
         escudoObject.SetActive(false);

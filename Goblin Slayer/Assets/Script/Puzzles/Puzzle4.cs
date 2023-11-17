@@ -14,16 +14,12 @@ public class Puzzle4 : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         localDeNascenca = GameObject.FindWithTag("LocalDeNascenca");
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            Audio.instance.dano.Play();
             player.transform.position = localDeNascenca.transform.position;
         }
     }
