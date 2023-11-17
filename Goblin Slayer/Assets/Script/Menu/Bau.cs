@@ -7,11 +7,16 @@ public class Bau : MonoBehaviour
 {
     private GameManager _gameManager;
 
+    public GameObject pilar;
+
     public bool bauFechado;
+
+    public Animator Animator;
     
     // Start is called before the first frame update
     void Start()
     {
+        Animator = pilar.GetComponent<Animator>();
         bauFechado = true;
         _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
@@ -28,6 +33,9 @@ public class Bau : MonoBehaviour
         {
             if (GameManager.instance.fases == 2 && bauFechado)
             {
+                Animator.SetBool("PilarDesativando", true);
+                pilar.GetComponent<BoxCollider2D>().enabled = false;
+                
                 _gameManager.tiroAtual = 3;
                 _gameManager.slot11.SetActive(false); //espada
                 _gameManager.slot12.SetActive(false); //escudo
@@ -43,6 +51,9 @@ public class Bau : MonoBehaviour
             
             if (GameManager.instance.fases == 4 && bauFechado)
             {
+                Animator.SetBool("PilarDesativando", true);
+                pilar.GetComponent<BoxCollider2D>().enabled = false;
+                
                 _gameManager.tiroAtual = 4;
                 _gameManager.slot1.SetActive(false); //espada
                 _gameManager.slot2.SetActive(false); //escudo
@@ -62,8 +73,12 @@ public class Bau : MonoBehaviour
             
             if (GameManager.instance.fases == 6 && bauFechado)
             {
+                Animator.SetBool("PilarDesativando", true);
+                pilar.GetComponent<BoxCollider2D>().enabled = false;
+                
                 if (_gameManager.pergaminhoFogo && _gameManager.pergaminhoRaio && !_gameManager.pergaminhoGelo)
                 {
+                    
                     _gameManager.slot14.SetActive(false); //espada
                     _gameManager.slot15.SetActive(false); //escudo
                     _gameManager.slot16.SetActive(false); //pergaminho1

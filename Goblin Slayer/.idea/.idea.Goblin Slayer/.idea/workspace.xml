@@ -6,14 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="00499c54-e07a-4f5e-b01f-6b5a7ab81b61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Goblin Slayer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cenario/Rocha pequena.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cenario/Rocha pequena.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cenario/barril.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cenario/barril.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cenario/barris.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cenario/barris.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cenario/cogumelo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cenario/cogumelo.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cenario/rochacovil.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cenario/rochacovil.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/BossController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemys/BossController.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyArqueiroController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyArqueiroController.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyCorpoACorpo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemys/EnemyCorpoACorpo.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Importantes/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Importantes/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fase4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fase4.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Menu/Bau.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Menu/Bau.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Menu/Pause.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Menu/Pause.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUD e UI/SelecaoArma/hudescudoativo3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUD e UI/SelecaoArma/hudescudoativo3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUD e UI/SelecaoArma/hudespadaativa2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUD e UI/SelecaoArma/hudespadaativa2.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +158,8 @@
       <workItem from="1700183722162" duration="1697000" />
       <workItem from="1700186385045" duration="4884000" />
       <workItem from="1700240036308" duration="4291000" />
-      <workItem from="1700244542549" duration="186000" />
+      <workItem from="1700244542549" duration="806000" />
+      <workItem from="1700253820814" duration="2484000" />
     </task>
     <servers />
   </component>
