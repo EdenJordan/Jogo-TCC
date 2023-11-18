@@ -9,9 +9,9 @@ using Random = UnityEngine.Random;
 public class Boss : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
-    private Animator Animator;
+    public Animator Animator;
     public GameObject SrpiteBoss;
-    private Transform targetPlayer;
+    public Transform targetPlayer;
 
 
     public static Boss instance;
@@ -34,7 +34,6 @@ public class Boss : MonoBehaviour
     private float lastAttackTime = 0f;
     public int danoParaDar;
     public bool isFire;
-    public bool estaAtacando;
     private float timeFire;
 
     //seguir jogador 
@@ -74,12 +73,48 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
-        if (targetPlayer.position.y > transform.position.y && !estaCongelado && !isFire && isFollowingPlayer && !estaAtacando)
+        if (ataqueBastao.activeSelf)
+        {
+            isFire = true;
+        }
+
+        if (isFire)
+        {
+            //tira a velocidade
+            speed = 0;
+            
+            //desativa o ataque
+            timeFire += Time.deltaTime;
+        
+            if (timeFire >= 0.8f)
+            {
+                VidaPlayer.instance.DanoPlayer(danoParaDar);
+                isFire = false;
+                ataqueBastao.SetActive(false);
+                timeFire = 0;
+            }
+            
+            //troca de animação
+            if (targetPlayer.position.y > transform.position.y)
+            {
+                Animator.SetInteger("Transicao", 6);
+            }
+            if (targetPlayer.position.y < transform.position.y)
+            {
+                Animator.SetInteger("Transicao", 12);
+            }
+        }
+        else if (!estaCongelado)
+        {
+            speed = 2;
+        }
+
+        if (targetPlayer.position.y > transform.position.y && !estaCongelado && !isFire && isFollowingPlayer)
         {
             Animator.SetInteger("Transicao", 2);
         }
       
-        if (targetPlayer.position.y < transform.position.y && !estaCongelado && !isFire && isFollowingPlayer && !estaAtacando)
+        if (targetPlayer.position.y < transform.position.y && !estaCongelado && !isFire && isFollowingPlayer)
         {
             Animator.SetInteger("Transicao", 8);
         }
@@ -123,16 +158,6 @@ public class Boss : MonoBehaviour
 
         //barra de vida
         barraDeVida.value = currentHealth;
-        
-        //desativa o ataque
-        timeFire += Time.deltaTime;
-        
-        if (timeFire >= 0.8f)
-        {
-            isFire = false;
-            ataqueBastao.SetActive(false);
-            timeFire = 0;
-        }
 
         //procura o jogador
         player = GameObject.FindGameObjectWithTag("Player");
@@ -195,6 +220,18 @@ public class Boss : MonoBehaviour
                     AttackMelee(player);
                 }
 
+            }
+            else
+            {
+                if (targetPlayer.position.y > transform.position.y && !estaCongelado && !isFire && !isFollowingPlayer)
+                {
+                    Animator.SetInteger("Transicao", 2);
+                }
+      
+                if (targetPlayer.position.y < transform.position.y && !estaCongelado && !isFire && !isFollowingPlayer)
+                {
+                    Animator.SetInteger("Transicao", 8);
+                }
             }
             //ataque a distancia
             if (!isFollowingPlayer && distanceToPlayer > attackRange && Time.time - lastAttackTime > attackCooldown)
@@ -308,7 +345,6 @@ public class Boss : MonoBehaviour
         }
         if (col.gameObject.CompareTag("ZonaDeDano") && isFire)
         {
-            VidaPlayer.instance.DanoPlayer(danoParaDar);
             isFire = false;
             timeFire = 0;
         }

@@ -34,6 +34,7 @@ public class DanoEnemyCaC : MonoBehaviour
         {
             if (dano)
             {
+                
                 VidaPlayer.instance.DanoPlayer(danoParaDar);
                 dano = false;
             }
