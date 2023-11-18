@@ -119,11 +119,11 @@ public class EnemyControllerCorpoACorpo : MonoBehaviour
             {
                 timeFire += Time.deltaTime;
             
-                if (timeFire >= 1)
+                if (timeFire >= 0.5)
                 {
                     ataque.SetActive(false);
                 }
-                if (timeFire >= 2)
+                if (timeFire >= 1)
                 {
                     estaAtacando = false;
                     animator.SetInteger("Transicao", 0);
